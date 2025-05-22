@@ -1,0 +1,69 @@
+﻿@model online.Models.Account
+
+@{
+    ViewData["Title"] = " Chi tiết ";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2 style="padding-left:20px">Tài khoản</h2>
+
+<body >
+    <div class="w3-container" style="width:70%">
+         <form asp-action="Details">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <table class="w3-table-all w3-card-4">
+            <tr>
+                    <th>   @Html.DisplayNameFor(model => model.Phone) </th>
+                    <th>   @Html.DisplayFor(model => model.Phone) </th>
+            </tr>
+
+              <tr>
+                    <th>   @Html.DisplayNameFor(model => model.Email) </th>
+                    <th>   @Html.DisplayFor(model => model.Email) </th>
+            </tr>
+
+              <tr>
+                    <th>   @Html.DisplayNameFor(model => model.Password) </th>
+                    <th>   @Html.DisplayFor(model => model.Password) </th>
+            </tr>
+
+              <tr>
+                    <th>   @Html.DisplayNameFor(model => model.Salt) </th>
+                    <th>   @Html.DisplayFor(model => model.Salt) </th>
+            </tr>
+
+                <tr>
+                    <th>   @Html.DisplayNameFor(model => model.Active) </th>
+                    <th>   @Html.DisplayFor(model => model.Active) </th>
+                </tr>
+
+                <tr>
+                    <th>   @Html.DisplayNameFor(model => model.FullName) </th>
+                    <th>   @Html.DisplayFor(model => model.FullName) </th>
+                </tr>
+
+                <tr>
+                    <th>   @Html.DisplayNameFor(model => model.LastLogin) </th>
+                    <th>   @Html.DisplayFor(model => model.LastLogin) </th>
+                </tr>
+
+                <tr>
+                    <th>   @Html.DisplayNameFor(model => model.CreateDate) </th>
+                    <th>   @Html.DisplayFor(model => model.CreateDate) </th>
+                </tr>
+
+                        <tr>
+                    <th>   @Html.DisplayNameFor(model => model.Role) </th>
+                    <th>   @Html.DisplayFor(model => model.Role.RoleName) </th>
+                </tr>
+
+            </table>
+            <br />
+            </form>
+    </div>
+</body>
+<br />
+<div style="padding-left:20px">
+    <a asp-action="Edit" asp-route-id="@Model.AccountId"> Chỉnh sửa</a> |
+    <a asp-action="Index"> Quay về</a>
+</div>

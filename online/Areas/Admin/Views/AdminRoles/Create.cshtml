@@ -1,0 +1,37 @@
+﻿@model online.Models.Role
+
+@{
+    ViewData["Title"] = " Tạo mới quyền ";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1 style="padding-left:20px">Tạo mới Quyền truy cập </h1>
+
+<body>
+    <div class="w3-container" style="width:70%">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <table class="w3-table-all w3-card-4">
+                <tr>
+                    <th> <label asp-for="RoleName" class="control-label"></label> </th>
+                    <th> <input asp-for="RoleName" class="form-control" /> </th>
+                    <th>  <span asp-validation-for="RoleName" class="text-danger"></span></th>
+                </tr>
+
+                <tr>
+                    <th>  <label asp-for="Description" class="control-label"></label> </th>
+                    <th> <input asp-for="Description" class="form-control" />  </th>
+                    <th> <span asp-validation-for="Description" class="text-danger"></span> </th>
+                </tr>
+            </table>
+            <br />
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</body>
+<br />
+<div style="padding-left:20px">
+    <a asp-action="Index">Quay về</a>
+</div>

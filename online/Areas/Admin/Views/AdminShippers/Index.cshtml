@@ -1,0 +1,41 @@
+﻿@model IEnumerable<online.Models.Shipper>
+
+@{
+    ViewData["Title"] = " Quản lý Shippers ";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1 style="padding-left:20px">Quản lý Shippers </h1>
+
+<p>
+    <a asp-action="Create" style="padding-left:20px">Tạo Mới</a>
+</p>
+
+<body>
+    <div class="w3-container">
+        <table class="w3-table-all w3-card-4">
+            <tr>
+                <th> Tên Shipper </th>
+                <th> SĐT </th>
+                <th> Công ty  </th>
+                <th> Ngày lấy hàng </th>
+                <th> ### </th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>  @Html.DisplayFor(modelItem => item.ShipperName)</td>
+                    <td>  @Html.DisplayFor(modelItem => item.Phone)</td>
+                    <td> @Html.DisplayFor(modelItem => item.Company)</td>
+                    <td>  @Html.DisplayFor(modelItem => item.ShipDate)</td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.ShipperId">Edit</a> |
+                        <a asp-action="Details" asp-route-id="@item.ShipperId">Details</a> |
+                        <a asp-action="Delete" asp-route-id="@item.ShipperId">Delete</a>
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+</body>

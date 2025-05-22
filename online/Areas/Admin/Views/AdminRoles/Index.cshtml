@@ -1,0 +1,74 @@
+﻿@model IEnumerable<online.Models.Role>
+
+@{
+    ViewData["Title"] = " Quản lý danh mục ";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1 style="padding-left:20px">Quản lý Quyền Truy Cập</h1>
+
+<h4>
+    <a asp-action="Create" style="padding-left:20px">Tạo mới</a>
+</h4>
+
+<body>
+
+    <div class="w3-container">
+        <table class="w3-table-all w3-card-4">
+            <tr>
+                <th>  ID</th>
+                <th>  Tên quyền</th>
+                <th>  Mô tả</th>
+                <th> Action </th>
+            </tr>
+
+            <tbody id="Record_role">
+                @if (Model != null)
+                {
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>  @Html.DisplayFor(modelItem => item.RoleId)</td>
+                            <td>  @Html.DisplayFor(modelItem => item.RoleName)</td>
+                            <td> @Html.DisplayFor(modelItem => item.Description)</td>
+                            <td>
+                                <a asp-action="Edit" asp-route-id="@item.RoleId">Edit</a> |
+                                <a asp-action="Details" asp-route-id="@item.RoleId">Details</a> |
+                                <a asp-action="Delete" asp-route-id="@item.RoleId">Delete</a>
+                            </td>
+                        </tr>
+                    }
+                }
+            </tbody>
+        </table>
+    </div>
+</body>
+
+
+@*@section Scripts{
+    <script>
+        $(document).ready(funtion()
+        {
+            $("#NameRole").keyup(function()
+            {
+                var strNamerole = $('#NameRole').val();
+                $.ajx({
+                        url: '/Admin/Search/FindRole/',
+                    datatype:"json",
+                    type:"POST",
+                    data:{keyword:strNamerole},
+                async: true,
+                success :function(results){
+                    $("#Record_role").html("");
+                    $("#Record_role").html(results);
+                },
+                error: funtion (xhr) {
+                    alert('error');
+                }
+                });
+            });
+        });
+
+    </script>
+    
+}*@

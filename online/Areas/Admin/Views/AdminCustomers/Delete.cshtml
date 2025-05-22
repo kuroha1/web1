@@ -1,0 +1,106 @@
+﻿@model online.Models.Customer
+
+@{
+    ViewData["Title"] = "Xóa Khách hàng";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2 style="padding-left:20px">@ViewBag.Title</h2>
+
+<h3 style="padding-left:20px">Bạn có chắc muốn xóa Khách hàng  này ?</h3>
+<hr />
+<body>
+    <div class="w3-container" style="width:70%">
+        <form asp-action="Delete">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <table class="w3-table-all w3-card-4">
+                <tr>
+                    <th>  @Html.DisplayNameFor(model => model.CustomerId) </th>
+                    <th>    @Html.DisplayFor(model => model.CustomerId) </th>
+                </tr>
+
+                <tr>
+                    <th>  @Html.DisplayNameFor(model => model.FullName) </th>
+                    <th>    @Html.DisplayFor(model => model.FullName) </th>
+                </tr>
+
+                <tr>
+                    <th>  @Html.DisplayNameFor(model => model.Birthday) </th>
+                    <th>    @Html.DisplayFor(model => model.Birthday) </th>
+                </tr>
+
+                <tr>
+                    <th>  @Html.DisplayNameFor(model => model.Avatar) </th>
+                    <th>    @Html.DisplayFor(model => model.Avatar) </th>
+                </tr>
+
+                <tr>
+                    <th>  @Html.DisplayNameFor(model => model.Address) </th>
+                    <th>    @Html.DisplayFor(model => model.Address) </th>
+                </tr>
+
+                <tr>
+                    <th>  @Html.DisplayNameFor(model => model.Email) </th>
+                    <th>    @Html.DisplayFor(model => model.Email) </th>
+                </tr>
+
+                <tr>
+                    <th>  @Html.DisplayNameFor(model => model.Phone) </th>
+                    <th>    @Html.DisplayFor(model => model.Phone) </th>
+                </tr>
+
+                <tr>
+                    <th>  @Html.DisplayNameFor(model => model.LocationId) </th>
+                    <th>    @Html.DisplayFor(model => model.LocationId) </th>
+                </tr>
+
+                <tr>
+                    <th>  @Html.DisplayNameFor(model => model.District) </th>
+                    <th>    @Html.DisplayFor(model => model.District) </th>
+                </tr>
+
+                <tr>
+                    <th>  @Html.DisplayNameFor(model => model.Ward) </th>
+                    <th>    @Html.DisplayFor(model => model.Ward) </th>
+                </tr>
+
+                <tr>
+                    <th>  @Html.DisplayNameFor(model => model.CreateDate) </th>
+                    <th>    @Html.DisplayFor(model => model.CreateDate) </th>
+                </tr>
+
+                <tr>
+                    <th>  @Html.DisplayNameFor(model => model.Password) </th>
+                    <th>    @Html.DisplayFor(model => model.Password) </th>
+                </tr>
+
+                <tr>
+                    <th>  @Html.DisplayNameFor(model => model.Salt) </th>
+                    <th>    @Html.DisplayFor(model => model.Salt) </th>
+                </tr>
+
+                <tr>
+                    <th>  @Html.DisplayNameFor(model => model.LastLogin) </th>
+                    <th>    @Html.DisplayFor(model => model.LastLogin) </th>
+                </tr>
+
+                <tr>
+                    <th>  @Html.DisplayNameFor(model => model.Active) </th>
+                    <th>    @Html.DisplayFor(model => model.Active) </th>
+                </tr>
+            </table>
+            <br />
+
+            <tr>
+                <th>  Xác nhận xóa </th>
+                <th>
+                    <form asp-action="Delete" asp-controller="AdminCustomers" asp-route-id="@Model.CustomerId">
+                        <input type="hidden" asp-for="CustomerId" />
+                        <input style="padding-left:20px" type="submit" value="Xóa" class="btn btn-default" /> |
+                        <a asp-action="Index" style="padding-left:20px">Quay về</a>
+                    </form>
+                </th>
+            </tr>
+        </form>
+    </div>
+</body>

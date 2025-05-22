@@ -1,0 +1,119 @@
+﻿@model online.Models.Product
+
+@{
+    ViewData["Title"] = " Chi tiết : ";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2 style="padding-left:20px"> Sản phẩm </h2>
+
+<body>
+    <div class="w3-container" style="width:70%">
+        <form asp-action="Details">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <table class="w3-table-all w3-card-4">
+                <tr>
+                    <th>   @Html.DisplayNameFor(model => model.ProductName) </th>
+                    <th>   @Html.DisplayFor(model => model.ProductName) </th>
+                </tr>
+
+                <tr>
+                    <th>   @Html.DisplayNameFor(model => model.Price) </th>
+                    <th>   @Html.DisplayFor(model => model.Price) </th>
+                </tr>
+
+                <tr>
+                    <th>   @Html.DisplayNameFor(model => model.Discount) </th>
+                    <th>   @Html.DisplayFor(model => model.Discount) </th>
+                </tr>
+
+                <tr>
+                    <th>   @Html.DisplayNameFor(model => model.DateCreate) </th>
+                    <th>   @Html.DisplayFor(model => model.DateCreate) </th>
+                </tr>
+
+                <tr>
+                    <th>   @Html.DisplayNameFor(model => model.DateModified) </th>
+                    <th>   @Html.DisplayFor(model => model.DateModified) </th>
+                </tr>
+
+                <tr>
+                    <th>   @Html.DisplayNameFor(model => model.Thumb) </th>
+                    <th>    <img width="200" height="200" src="~/images/Products/@Model.Thumb" alt="@Model.Title" /> </th>
+                </tr>
+
+                <tr>
+                    <th>   @Html.DisplayNameFor(model => model.Video) </th>
+                    <th>   @Html.DisplayFor(model => model.Video) </th>
+                </tr>
+
+                <tr>
+                    <th>   @Html.DisplayNameFor(model => model.BestSellers) </th>
+                    <th>   @Html.DisplayFor(model => model.BestSellers) </th>
+                </tr>
+
+                <tr>
+                    <th>   @Html.DisplayNameFor(model => model.HomeFlag) </th>
+                    <th>   @Html.DisplayFor(model => model.HomeFlag) </th>
+                </tr>
+
+                <tr>
+                    <th>   @Html.DisplayNameFor(model => model.Active) </th>
+                    <th>   @Html.DisplayFor(model => model.Active) </th>
+                </tr>
+
+                <tr>
+                    <th>   @Html.DisplayNameFor(model => model.MetaDesc) </th>
+                    <th>   @Html.DisplayFor(model => model.MetaDesc) </th>
+                </tr>
+
+                <tr>
+                    <th>   @Html.DisplayNameFor(model => model.MetaKey) </th>
+                    <th>   @Html.DisplayFor(model => model.MetaKey) </th>
+                </tr>
+
+                  <tr>
+                    <th>   @Html.DisplayNameFor(model => model.Tags) </th>
+                    <th>   @Html.DisplayFor(model => model.Tags) </th>
+                </tr>
+
+                <tr>
+                    <th>   @Html.DisplayNameFor(model => model.Title) </th>
+                    <th>   @Html.DisplayFor(model => model.Title) </th>
+                </tr>
+
+                <tr>
+                    <th>   @Html.DisplayNameFor(model => model.Alias) </th>
+                    <th>   @Html.DisplayFor(model => model.Alias) </th>
+                </tr>
+
+                <tr>
+                    <th>   @Html.DisplayNameFor(model => model.UnitslnStock) </th>
+                    <th>   @Html.DisplayFor(model => model.UnitslnStock) </th>
+                </tr>
+
+                <tr>
+                    <th>   @Html.DisplayNameFor(model => model.CatId) </th>
+                    <th>   @Html.DisplayFor(model => model.Cat.CatId) </th>
+                </tr>
+
+                <tr>
+                    <th>   @Html.DisplayNameFor(model => model.ShortDesc) </th>
+                    <th>   @Html.DisplayFor(model => model.ShortDesc) </th>
+                </tr>
+
+                <tr>
+                    <th>   @Html.DisplayNameFor(model => model.Description) </th>
+                    <th>   @Html.DisplayFor(model => model.Description) </th>
+                </tr>
+
+            </table>
+            <br />
+        </form>
+    </div>
+</body>
+<br />
+<div style="padding-left:20px">
+    <a asp-action="Edit" asp-route-id="@Model.ProductId"> Chỉnh sữa</a> |
+    <a asp-action="Index"> Quay về</a>
+</div>

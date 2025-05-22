@@ -1,0 +1,229 @@
+﻿@model List<online.ModelView.Cartitem>
+@{
+    ViewData["Title"] = "Cart";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="section">
+    <!-- container -->
+    <div class="container">
+        <!-- row -->
+        <div class="row">
+
+            <div class="col-md-7">
+                <!-- Billing Details -->
+                <div class="billing-details">
+                    <div class="section-title">
+                        <h3 class="title"> Đia chỉ thanh toán </h3>
+                    </div>
+                    <div class="form-group">
+                        <input class="input" type="text" name="first-name" placeholder="First Name">
+                    </div>
+                    <div class="form-group">
+                        <input class="input" type="text" name="last-name" placeholder="Last Name">
+                    </div>
+                    <div class="form-group">
+                        <input class="input" type="email" name="email" placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                        <input class="input" type="text" name="address" placeholder="Address">
+                    </div>
+                    <div class="form-group">
+                        <input class="input" type="text" name="city" placeholder="City">
+                    </div>
+                    <div class="form-group">
+                        <input class="input" type="text" name="country" placeholder="Country">
+                    </div>
+                    <div class="form-group">
+                        <input class="input" type="text" name="zip-code" placeholder="ZIP Code">
+                    </div>
+                    <div class="form-group">
+                        <input class="input" type="tel" name="tel" placeholder="Telephone">
+                    </div>
+                    <div class="form-group">
+                        <div class="input-checkbox">
+                            <input type="checkbox" id="create-account">
+                            <label for="create-account">
+                                <span></span>
+                                Create Account?
+                            </label>
+                            <div class="caption">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+                                <input class="input" type="password" name="password" placeholder="Enter Your Password">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /Billing Details -->
+                <!-- Shiping Details -->
+                <div class="shiping-details">
+                    <div class="section-title">
+                        <h3 class="title">Shiping address</h3>
+                    </div>
+                    <div class="input-checkbox">
+                        <input type="checkbox" id="shiping-address">
+                        <label for="shiping-address">
+                            <span></span>
+                            Ship to a diffrent address?
+                        </label>
+                        <div class="caption">
+                            <div class="form-group">
+                                <input class="input" type="text" name="first-name" placeholder="First Name">
+                            </div>
+                            <div class="form-group">
+                                <input class="input" type="text" name="last-name" placeholder="Last Name">
+                            </div>
+                            <div class="form-group">
+                                <input class="input" type="email" name="email" placeholder="Email">
+                            </div>
+                            <div class="form-group">
+                                <input class="input" type="text" name="address" placeholder="Address">
+                            </div>
+                            <div class="form-group">
+                                <input class="input" type="text" name="city" placeholder="City">
+                            </div>
+                            <div class="form-group">
+                                <input class="input" type="text" name="country" placeholder="Country">
+                            </div>
+                            <div class="form-group">
+                                <input class="input" type="text" name="zip-code" placeholder="ZIP Code">
+                            </div>
+                            <div class="form-group">
+                                <input class="input" type="tel" name="tel" placeholder="Telephone">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /Shiping Details -->
+                <!-- Order notes -->
+                <div class="order-notes">
+                    <textarea class="input" placeholder="Order Notes"></textarea>
+                </div>
+                <!-- /Order notes -->
+            </div>
+
+            <!-- Order Details -->
+            <div class="col-md-5 order-details">
+                <div class="section-title text-center">
+                    <h3 class="title">Your Order</h3>
+                </div>
+                <div class="order-summary">
+                    <div class="order-col">
+                        <div><strong> Sản Phẩm </strong></div>
+                        <div><strong> Tổng Cộng </strong></div>
+                    </div>
+                    <div class="order-products">
+                        @if (Model != null && Model.Count() > 0)
+                        {
+                            foreach (var item in Model)
+                            {
+                                <div class="order-col">                                  
+                                    <div>@item.sanpham.ProductName</div>
+                                    <div>@item.sanpham.Price.Value.ToString("#,##0")USD</div>
+                                </div>
+
+                                <div class="qty-label">
+                                    Qty
+                                    <div class="input-number">
+                                        <input value="@item.amount" type="text">
+                                    </div>
+                                </div>
+                            }
+                        }
+                        else
+                        {
+                            <p> Chưa có sản phẩm nào </p>
+                        }
+                    </div>
+                    <div class="order-col">
+                        <div> Vận Chuyển</div>
+                        <div><strong>FREE</strong></div>
+                    </div>
+                    <div class="order-col">
+                        <div><strong>Tổng Cộng</strong></div>
+
+                        <div><strong class="order-total">@*@Model.Sum(x=>x.Totalmoney).ToString("#,##0")USD*@</strong></div>
+                    </div>
+
+                    @* <td>
+                    <button class="btn btn-success updatecartitem"
+                    data-productid="@cartitem.product.ProductId">Cập nhật
+                    </button>
+                    <a asp-route="removecart" asp-route-productid="@cartitem.product.ProductId"
+                    class="btn btn-danger">Xóa</a>
+                    </td>*@
+                </div>
+                <div class="payment-method">
+                    <div class="input-radio">
+                        <input type="radio" name="payment" id="payment-1">
+                        <label for="payment-1">
+                            <span></span>
+                            Direct Bank Transfer
+                        </label>
+                        <div class="caption">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        </div>
+                    </div>
+                    <div class="input-radio">
+                        <input type="radio" name="payment" id="payment-2">
+                        <label for="payment-2">
+                            <span></span>
+                            Cheque Payment
+                        </label>
+                        <div class="caption">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        </div>
+                    </div>
+                    <div class="input-radio">
+                        <input type="radio" name="payment" id="payment-3">
+                        <label for="payment-3">
+                            <span></span>
+                            Paypal System
+                        </label>
+                        <div class="caption">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="input-checkbox">
+                    <input type="checkbox" id="terms">
+                    <label for="terms">
+                        <span></span>
+                        I've read and accept the <a href="#">terms &amp; conditions</a>
+                    </label>
+                </div>
+                <a href="#" class="primary-btn order-submit">Place order</a>
+
+
+                @section Scripts {
+                    <script>
+                        $(document).ready(function () {
+                            $(".updatecartitem").click(function (event) {
+                                event.preventDefault();
+                                var productid = $(this).attr("data-productid");
+                                var quantity = $("#quantity-" + productid).val();
+                                $.ajax({
+                                    type: "POST",
+                                    url: "@Url.RouteUrl("updatecart")",
+                                    data: {
+                                        productid: productid,
+                                        quantity: quantity
+                                    },
+                                    success: function (result) {
+                                        window.location.href = "@Url.RouteUrl("cart")";
+                                    }
+                                });
+                            });
+                        });
+                    </script>
+                }
+            </div>
+            <!-- /Order Details -->
+        </div>
+        <!-- /row -->
+    </div>
+    <!-- /container -->
+</div>
+
+

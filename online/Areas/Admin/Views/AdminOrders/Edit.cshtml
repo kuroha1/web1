@@ -1,0 +1,78 @@
+﻿@model online.Models.Order
+
+@{
+    ViewData["Title"] = " Chỉnh sửa";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<body style="padding-left:20px">
+    <h2 style="padding-left:20px"> Khách hàng </h2>
+    <div class="w3-container" style="width:70%">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="OrderId" />
+            <table class="w3-table-all w3-card-4">
+                <tr>
+                    <th>  <label asp-for="CustomerId" class="control-label"></label> </th>
+                    <th>  <input asp-for="CustomerId" class="form-control" /> </th>
+                    <th>  <span asp-validation-for="CustomerId" class="text-danger"></span> </th>
+                </tr>
+
+                <tr>
+                    <th>  <label asp-for="OrderDate" class="control-label"></label> </th>
+                    <th>  <input asp-for="OrderDate" class="form-control" /> </th>
+                    <th>  <span asp-validation-for="OrderDate" class="text-danger"></span> </th>
+                </tr>
+
+                <tr>
+                    <th>  <label asp-for="ShipDate" class="control-label"></label> </th>
+                    <th>  <input asp-for="ShipDate" class="form-control" /> </th>
+                    <th>  <span asp-validation-for="ShipDate" class="text-danger"></span> </th>
+                </tr>
+
+                <tr>
+                    <th>  <label asp-for="TransactStatus" class="control-label"></label> </th>
+                    <th>  <input asp-for="TransactStatus" class="form-control" /> </th>
+                    <th>  <span asp-validation-for="TransactStatus" class="text-danger"></span> </th>
+                </tr>
+
+                <tr>
+                    <div class="form-group form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" asp-for="Deleted" /> @Html.DisplayNameFor(model => model.Deleted)
+                        </label>
+                    </div>
+                </tr>
+
+                <tr>
+                    <div class="form-group form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" asp-for="Paid" /> @Html.DisplayNameFor(model => model.Paid)
+                        </label>
+                    </div>
+                </tr>
+
+                <tr>
+                    <th>  <label asp-for="PaymentDate" class="control-label"></label> </th>
+                    <th>  <input asp-for="PaymentDate" class="form-control" /> </th>
+                    <th>  <span asp-validation-for="PaymentDate" class="text-danger"></span> </th>
+                </tr>
+
+                <tr>
+                    <th>  <label asp-for="Note" class="control-label"></label> </th>
+                    <th>  <input asp-for="Note" class="form-control" /> </th>
+                    <th>  <span asp-validation-for="Note" class="text-danger"></span> </th>
+                </tr>
+
+            </table>
+            <br />
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</body>
+<br />
+<div>
+    <a style="padding-left:20px" asp-action="Index">Quay về</a>
+</div>

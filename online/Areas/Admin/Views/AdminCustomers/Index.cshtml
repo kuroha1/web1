@@ -1,0 +1,50 @@
+﻿@model IEnumerable<online.Models.Customer>
+
+@{
+    ViewData["Title"] = "Quản lý Khách hàng";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2 style="padding-left:20px">Quản lý khách hàng </h2>
+
+<p>
+    <a asp-action="Create" style="padding-left:20px">Tạo Mới</a>
+</p>
+
+<body>
+    <div class="w3-container">
+        <table class="w3-table-all w3-card-4">
+            <tr>
+                <th> ID </th>
+                <th> Họ và Tên </th>
+                <th> Email  </th>
+                <th> SĐT </th>
+                <th> Salt </th>
+                <th> Đăng  nhập </th>
+                <th> Active </th>
+                <th> ### </th>
+            </tr>
+
+            @if(Model != null)
+            {
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>  @Html.DisplayFor(modelItem => item.CustomerId)</td>
+                        <td>  @Html.DisplayFor(modelItem => item.FullName)</td>
+                        <td> @Html.DisplayFor(modelItem => item.Email)</td>
+                        <td>  @Html.DisplayFor(modelItem => item.Phone)</td>
+                        <td> @Html.DisplayFor(modelItem => item.Salt)</td>
+                        <td>  @Html.DisplayFor(modelItem => item.LastLogin)</td>
+                        <td>  @Html.DisplayFor(modelItem => item.Active)</td>
+                        <td>
+                            <a asp-action="Edit" asp-route-id="@item.CustomerId">Edit</a> |
+                            <a asp-action="Details" asp-route-id="@item.CustomerId">Details</a> |
+                            <a asp-action="Delete" asp-route-id="@item.CustomerId">Delete</a>
+                        </td>
+                    </tr>
+                }
+            }
+        </table>
+    </div>
+</body>

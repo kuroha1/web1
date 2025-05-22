@@ -1,0 +1,77 @@
+﻿@model online.Models.Account
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1 style="padding-left:20px">Tạo mới tài khoản </h1>
+
+<body>
+    <div class="w3-container" style="width:70%">
+         <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <table class="w3-table-all w3-card-4">
+            <tr>
+                    <th> <label asp-for="Phone" class="control-label"></label> </th>
+                    <th> <input asp-for="Phone" class="form-control" /> </th>
+                    <th>  <span asp-validation-for="Phone" class="text-danger"></span></th>
+            </tr>
+
+            <tr>
+                    <th>  <label asp-for="Email" class="control-label"></label> </th>
+                    <th>  <input asp-for="Email" class="form-control" /> </th>
+                    <th>  <span asp-validation-for="Email" class="text-danger"></span> </th>
+            </tr>
+
+            <tr>
+                    <th>  <label asp-for="Password" class="control-label"></label> </th>
+                    <th> <input asp-for="Password" class="form-control" />  </th>
+                    <th> <span asp-validation-for="Password" class="text-danger"></span> </th>
+            </tr>
+
+                <tr>
+                    <th>  <label asp-for="Salt" class="control-label"></label> </th>
+                    <th> <input asp-for="Salt" class="form-control" />  </th>
+                    <th> <span asp-validation-for="Salt" class="text-danger"></span> </th>
+                </tr>
+
+                <tr>
+                    <th>Active</th>
+                    <th>  <label> <input asp-for="Active" /> @Html.DisplayNameFor(model => model.Active) </label> </th>
+                </tr>
+
+                <tr>
+                    <th>  <label asp-for="FullName" class="control-label"></label> </th>
+                    <th> <input asp-for="FullName" class="form-control" />  </th>
+                    <th> <span asp-validation-for="FullName" class="text-danger"></span> </th>
+                </tr>
+
+            <tr >
+                    <th><label asp-for="RoleId" class="control-label"></label></th>
+                    <th><select asp-for="RoleId" class="form-control" asp-items="ViewBag.RoleId"></select></th>
+            </tr>
+
+               <tr>
+                    <th>  <label asp-for="LastLogin" class="control-label"></label> </th>
+                    <th> <input asp-for="LastLogin" class="form-control" />  </th>
+                    <th> <span asp-validation-for="LastLogin" class="text-danger"></span> </th>
+                </tr>
+
+                 <tr>
+                    <th>  <label asp-for="CreateDate" class="control-label"></label> </th>
+                    <th> <input asp-for="CreateDate" class="form-control" />  </th>
+                    <th> <span asp-validation-for="CreateDate" class="text-danger"></span> </th>
+                </tr>
+            </table>
+            <br />
+             <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+            </form>
+    </div>
+</body>
+<br />
+<div style="padding-left:20px">
+    <a asp-action="Index" >Quay về</a>
+</div>

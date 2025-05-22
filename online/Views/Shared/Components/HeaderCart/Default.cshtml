@@ -1,0 +1,46 @@
+﻿@using Microsoft.AspNetCore.Http
+@using Newtonsoft.Json
+@using online.ModelView;
+
+@model List<online.ModelView.Cartitem>
+@if (Model != null && Model.Count() > 0)
+{
+    <div class="cart-dropdown" id="miniCart">
+        <div class="cart-list">
+            @foreach (var item in Model)
+            {
+                string url = $"/{item.sanpham.Alias}-{item.sanpham.ProductId}.html";
+                <div class="product-widget">
+                    <div class="product-img">
+                        <img src="~/images//Products/@item.sanpham.Thumb" alt="@item.sanpham.Title">
+                    </div>
+                    <div class="product-body">
+                        <h3 class="product-name"><a href="@url">@item.sanpham.ProductName</a></h3>
+                        <h4 class="product-price">@item.amount x @item.sanpham.Price.Value.ToString("#,##0") USD</h4>
+                    </div>
+                    <button class="delete"><i class="fa fa-close"></i></button>
+                </div>
+            }
+        </div>
+        <div class="cart-summary">
+            <h5>Tổng đơn hàng : @Model.Sum(x=>x.Totalmoney).ToString("#,##0") USD</h5>
+        </div>
+        <div class="cart-btns">
+            <a href="cart.html">Xem giỏ hàng</a>
+            <a href="checkout.html">Thanh Toán <i class="fa fa-arrow-circle-right"></i></a>
+        </div>
+    </div>
+}
+else
+{
+    <div class="cart-dropdown">
+        <div>
+            <h4>" Giỏ hàng hiện đang trống"</h4>
+        </div>
+        <div class="cart-btns">
+            <a href="cart.html">Xem giỏ hàng</a>
+            <a href="#">Thanh Toán <i class="fa fa-arrow-circle-right"></i></a>
+        </div>
+    </div>
+}
+

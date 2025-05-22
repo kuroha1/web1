@@ -1,0 +1,49 @@
+﻿@model online.Models.Shipper
+
+@{
+    ViewData["Title"] = " Tạo mới Shippers";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1 style="padding-left:20px">Tạo mới Shippers </h1>
+
+<body>
+    <div class="w3-container" style="width:70%">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <table class="w3-table-all w3-card-4">
+                <tr>
+                    <th> <label asp-for="ShipperName" class="control-label"></label> </th>
+                    <th> <input asp-for="ShipperName" class="form-control" /> </th>
+                    <th>  <span asp-validation-for="ShipperName" class="text-danger"></span></th>
+                </tr>
+
+                <tr>
+                    <th>  <label asp-for="Phone" class="control-label"></label> </th>
+                    <th> <input asp-for="Phone" class="form-control" />  </th>
+                    <th> <span asp-validation-for="Phone" class="text-danger"></span> </th>
+                </tr>
+
+                <tr>
+                    <th>  <label asp-for="Company" class="control-label"></label> </th>
+                    <th> <input asp-for="Company" class="form-control" />  </th>
+                    <th> <span asp-validation-for="Company" class="text-danger"></span> </th>
+                </tr>
+
+                <tr>
+                    <th>  <label asp-for="ShipDate" class="control-label"></label> </th>
+                    <th> <input asp-for="ShipDate" class="form-control" />  </th>
+                    <th> <span asp-validation-for="ShipDate" class="text-danger"></span> </th>
+                </tr>
+            </table>
+            <br />
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</body>
+<br />
+<div style="padding-left:20px">
+    <a asp-action="Index">Quay về</a>
+</div>

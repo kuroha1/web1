@@ -1,0 +1,76 @@
+﻿@model IEnumerable<online.Models.Product>
+
+@{
+    ViewData["Title"] = " Quản lý Sản phẩm ";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<h1 style="padding-left:20px">Quản lý Sản phẩm </h1>
+
+<p>
+    <a asp-action="Create" style="padding-left:20px">Tạo Mới</a>
+</p>
+
+<body>
+    <div class="w3-container">
+        <table class="w3-table-all w3-card-4">
+            <tr>
+                <th> ID </th>
+                <th> Tên </th>
+                <th> CatName</th>
+                <th> Price</th>
+                <th> Discount</th>
+                <th> DateCreate</th>
+                <th> BestSeller</th>
+                <th> HomeFlag</th>
+                <th> Active</th>
+                <th> Action </th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>  @Html.DisplayFor(modelItem => item.ProductId)</td>
+                    <td>  @Html.DisplayFor(modelItem => item.ProductName)</td>
+                    <td>  @Html.DisplayFor(modelItem => item.CatId)</td>
+                    <td> @Html.DisplayFor(modelItem => item.Price)</td>
+                    <td>  @Html.DisplayFor(modelItem => item.Discount)</td>
+                    <td>  @Html.DisplayFor(modelItem => item.DateCreate)</td>
+                    <td> @Html.DisplayFor(modelItem => item.BestSellers)</td>
+                    <td>  @Html.DisplayFor(modelItem => item.HomeFlag)</td>
+                    <td>  @Html.DisplayFor(modelItem => item.Active)</td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.ProductId">Edit</a> |
+                        <a asp-action="Details" asp-route-id="@item.ProductId">Details</a> |
+                        <a asp-action="Delete" asp-route-id="@item.ProductId">Delete</a>
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+</body>
+
+@*@section Scripts{
+    <script>
+        $(document).ready(function () {
+            $("#keyword").keyup(function () {
+                var strkeyword = $('#keyword').val();
+                $.ajax({
+                    url: '/Admin/Search/FindProduct',
+                    datetype: "json",
+                    type: "POST",
+                    data: { keyword: strkeyword },
+                    async: true,
+                    success: function (results) {
+                        $("#products-table").html("");
+                        $("#products-table").html(results);
+                    },
+                    error: function (xhr) {
+                        alert('error');
+                    }
+                });
+            });
+        });
+    </script>*@
+

@@ -1,0 +1,45 @@
+﻿@model online.Models.Shipper
+
+@{
+    ViewData["Title"] = " Chi tiết ";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2 style="padding-left:20px">Chi tiết</h2>
+
+<h4 style="padding-left:20px"> Shipper</h4>
+
+<body>
+    <div class="w3-container" style="width:70%">
+        <form asp-action="Details">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <table class="w3-table-all w3-card-4">
+                <tr>
+                    <th>   @Html.DisplayNameFor(model => model.ShipperName) </th>
+                    <th>   @Html.DisplayFor(model => model.ShipperName) </th>
+                </tr>
+
+                <tr>
+                    <th>   @Html.DisplayNameFor(model => model.Phone) </th>
+                    <th>   @Html.DisplayFor(model => model.Phone) </th>
+                </tr>
+
+                <tr>
+                    <th>   @Html.DisplayNameFor(model => model.Company) </th>
+                    <th>   @Html.DisplayFor(model => model.Company) </th>
+                </tr>
+
+                <tr>
+                    <th>   @Html.DisplayNameFor(model => model.ShipDate) </th>
+                    <th>   @Html.DisplayFor(model => model.ShipDate) </th>
+                </tr>
+            </table>
+            <br />
+        </form>
+    </div>
+</body>
+<br />
+<div style="padding-left:20px">
+    <a asp-action="Edit" asp-route-id="@Model.ShipperId"> Chỉnh sữa</a> |
+    <a asp-action="Index"> Quay về</a>
+</div>

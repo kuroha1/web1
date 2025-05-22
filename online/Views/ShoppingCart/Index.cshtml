@@ -1,0 +1,122 @@
+﻿@model List<online.ModelView.Cartitem>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="section">
+    <!-- container -->
+    <div class="container">
+        <!-- row -->
+        <div class="row">
+
+            <!-- Order Details -->
+            <div class="col-md-5 order-details">
+                <div class="section-title text-center">
+                    <h3 class="title">Your Order</h3>
+                </div>
+                <div class="order-summary">
+                    <div class="order-col">
+                        <div><strong> Sản Phẩm </strong></div>
+                        <div><strong> Tổng Cộng </strong></div>
+                    </div>
+                    <div class="order-products">
+                        @if (Model != null && Model.Count() > 0)
+                        {
+                            foreach (var item in Model)
+                            {
+                                <div class="order-col">
+                                    <div class="product_remove" style="width:50px;height:10px">
+                                        <input type="button" value="X" class="removeCart btn btn-danger" data-mahh="@item.sanpham.ProductId">
+                                    </div>
+                                    <div>@item.sanpham.ProductName</div>
+                                    <div>@item.Totalmoney.ToString("#,##0")USD</div>
+                                </div>
+
+                                <div class="cart-plus-minus">
+                                    <input style="width:80px" data-mahh="@item.sanpham.ProductId"
+                                   data-dongia="@item.sanpham.Price"
+                                   class="cartItem cart-plus-minus-box" value="@item.amount" min="1"
+                                   type="number"> x @item.sanpham.Price (USD)
+                                </div>
+                                <hr />
+                            }
+                        }
+                        else
+                        {
+                            <p> Chưa có sản phẩm nào </p>
+                        }
+                    </div>
+                    <div class="order-col">
+                        <div> Vận Chuyển</div>
+                        <div><strong>FREE</strong></div>
+                    </div>
+                    <div class="order-col">
+                        <div><strong>Tổng Cộng</strong></div>
+
+                        <div><strong class="order-total amount">@Model.Sum(x=>x.Totalmoney).ToString("#,##0") USD</strong></div>
+                    </div>
+                </div>
+            </div>
+            <!-- /Order Details -->
+        </div>
+        <!-- /row -->
+    </div>
+    <!-- /container -->
+</div>
+
+@section scripts{
+    <script>
+        $(document).ready(function () {
+            $(function () {
+                function loadHeaderCart() {
+                    $("#miniCart").load("/AjaxContent/HeaderCart");
+                    $("#numberCart").load("/AjaxContent/NumberCart");
+                }
+                $(".cartItem").click(function () {
+                    var productid = $(this).attr("data-mahh");
+                    var soluong = parseInt($(this).val());
+                    $.ajax({
+                        url: "/api/cart/update",
+                        type: "POST",
+                        dataType: "JSON",
+                        data: {
+                            productID: productid,
+                            amount: soluong
+                        },
+                        success: function (result) {
+                            if (result.success) {
+                                loadHeaderCart(); // Reload lại giỏ hàng
+                                window.location = 'cart.html'; // Load lại cái giỏ
+                            }
+                        },
+                        error: function (rs) {
+                            alert("Cập nhật thất bại")
+                        }
+                    });
+                });
+                $(".removeCart").click(function () {
+                    var productid = $(this).attr("data-mahh");
+                    $.ajax({
+                        url: '/api/cart/remove',
+                        type: "POST",
+                        dataType: "JSON",
+                        data: {
+                            productID: productid
+                        },
+                        success: function (result) {
+                            if (result.success) {
+                                loadHeaderCart(); // Reload lại giỏ hàng
+                                location.reload(); // Load lại cái giỏ
+                            }
+                        },
+                        error: function (error) {
+                            alert(error.responseText);
+                        }
+                    });
+                });
+            });
+        })
+
+    </script>
+}

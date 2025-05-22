@@ -1,0 +1,115 @@
+﻿@model online.Models.Customer
+
+@{
+    ViewData["Title"] = " Chỉnh sửa";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<body style="padding-left:20px">
+    <h2 style="padding-left:20px"> Khách hàng </h2>
+    <div class="w3-container" style="width:70%">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="CustomerId" />
+            <table class="w3-table-all w3-card-4">
+                <tr>
+                    <th>  <label asp-for="FullName" class="control-label"></label> </th>
+                    <th>  <input asp-for="FullName" class="form-control" /> </th>
+                    <th>  <span asp-validation-for="FullName" class="text-danger"></span> </th>
+                </tr>
+
+                <tr>
+                    <th>  <label asp-for="Birthday" class="control-label"></label> </th>
+                    <th>  <input asp-for="Birthday" class="form-control" /> </th>
+                    <th>  <span asp-validation-for="Birthday" class="text-danger"></span> </th>
+                </tr>
+
+                <tr>
+                    <th>  <label asp-for="Avatar" class="control-label"></label> </th>
+                    <th>  <input asp-for="Avatar" class="form-control" /> </th>
+                    <th>  <span asp-validation-for="Avatar" class="text-danger"></span> </th>
+                </tr>
+
+                <tr>
+                    <th>  <label asp-for="Address" class="control-label"></label> </th>
+                    <th>  <input asp-for="Address" class="form-control" /> </th>
+                    <th>  <span asp-validation-for="Address" class="text-danger"></span> </th>
+                </tr>
+
+                <tr>
+                    <th>  <label asp-for="Email" class="control-label"></label> </th>
+                    <th>  <input asp-for="Email" class="form-control" /> </th>
+                    <th>  <span asp-validation-for="Email" class="text-danger"></span> </th>
+                </tr>
+
+                <tr>
+                    <th>  <label asp-for="Phone" class="control-label"></label> </th>
+                    <th>  <input asp-for="Phone" class="form-control" /> </th>
+                    <th>  <span asp-validation-for="Phone" class="text-danger"></span> </th>
+                </tr>
+
+                <tr>
+                    <th>  <label asp-for="LocationId" class="control-label"></label> </th>
+                    <th>  <input asp-for="LocationId" class="form-control" /> </th>
+                    <th>  <span asp-validation-for="LocationId" class="text-danger"></span> </th>
+                </tr>
+
+                <tr>
+                    <th>  <label asp-for="District" class="control-label"></label> </th>
+                    <th>  <input asp-for="District" class="form-control" /> </th>
+                    <th>  <span asp-validation-for="District" class="text-danger"></span> </th>
+                </tr>
+
+                <tr>
+                    <th>  <label asp-for="Ward" class="control-label"></label> </th>
+                    <th>  <input asp-for="Ward" class="form-control" /> </th>
+                    <th>  <span asp-validation-for="Ward" class="text-danger"></span> </th>
+                </tr>
+
+                <tr>
+                    <th>  <label asp-for="CreateDate" class="control-label"></label> </th>
+                    <th>  <input asp-for="CreateDate" class="form-control" /> </th>
+                    <th>  <span asp-validation-for="CreateDate" class="text-danger"></span> </th>
+                </tr>
+
+                <tr>
+                    <th>  <label asp-for="Password" class="control-label"></label> </th>
+                    <th>  <input asp-for="Password" class="form-control" /> </th>
+                    <th>  <span asp-validation-for="Password" class="text-danger"></span> </th>
+                </tr>
+
+                <tr>
+                    <th>  <label asp-for="Salt" class="control-label"></label> </th>
+                    <th>  <input asp-for="Salt" class="form-control" /> </th>
+                    <th>  <span asp-validation-for="Salt" class="text-danger"></span> </th>
+                </tr>
+
+                <tr>
+                    <th>  <label asp-for="LastLogin" class="control-label"></label> </th>
+                    <th>  <input asp-for="LastLogin" class="form-control" /> </th>
+                    <th>  <span asp-validation-for="LastLogin" class="text-danger"></span> </th>
+                </tr>
+
+                <tr>
+                    <th>  Active </th>
+                    <th>
+                        <div class="checkbox">
+                            <label>
+                                <input asp-for="Active" /> @Html.DisplayNameFor(model => model.Active)
+                            </label>
+                        </div>
+                    </th>
+                </tr>
+
+            </table>
+            <br />
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</body>
+<br />
+<div>
+    <a style="padding-left:20px" asp-action="Index">Quay về</a>
+</div>

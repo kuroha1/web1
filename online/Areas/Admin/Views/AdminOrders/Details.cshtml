@@ -1,0 +1,61 @@
+﻿@model online.Models.Order
+
+@{
+    ViewData["Title"] = " Chi tiết ";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2 style="padding-left:20px">Don Hang</h2>
+
+<body>
+    <div class="w3-container" style="width:70%">
+        <form asp-action="Details">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <table class="w3-table-all w3-card-4">
+                <tr>
+                    <th>   @Html.DisplayNameFor(model => model.CustomerId) </th>
+                    <th>   @Html.DisplayFor(model => model.CustomerId) </th>
+                </tr>
+
+                <tr>
+                    <th>   @Html.DisplayNameFor(model => model.OrderDate) </th>
+                    <th>   @Html.DisplayFor(model => model.OrderDate) </th>
+                </tr>
+
+                <tr>
+                    <th>   @Html.DisplayNameFor(model => model.OrderId) </th>
+                    <th>   @Html.DisplayFor(model => model.OrderId) </th>
+                </tr>
+
+                <tr>
+                    <th>   @Html.DisplayNameFor(model => model.ShipDate) </th>
+                    <th>   @Html.DisplayFor(model => model.ShipDate) </th>
+                </tr>
+
+                <tr>
+                    <th>   @Html.DisplayNameFor(model => model.TransactStatus.Status) </th>
+                    <th>   @Html.DisplayFor(model => model.TransactStatus.Status) </th>
+                </tr>
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>No.</th>
+                                <th>Items</th>
+                                <th>Quantity</th>
+                                <th>Price</th>
+                                <th>Total</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+            </table>
+            <br />
+        </form>
+    </div>
+</body>
+<br />
+<div style="padding-left:20px">
+    <a asp-action="Edit" asp-route-id="@Model.CustomerId"> Chỉnh sửa</a> |
+    <a asp-action="Index"> Quay về</a>
+</div>

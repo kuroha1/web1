@@ -1,0 +1,89 @@
+﻿@model online.Models.Category
+
+@{
+    ViewData["Title"] = " Chi tiết ";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2 style="padding-left:20px">Danh mục</h2>
+
+<body>
+    <div class="w3-container" style="width:70%">
+        <form asp-action="Details">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <table class="w3-table-all w3-card-4">
+                <tr>
+                    <th>   @Html.DisplayNameFor(model => model.CatName) </th>
+                    <th>   @Html.DisplayFor(model => model.CatName) </th>
+                </tr>
+
+                <tr>
+                    <th>   @Html.DisplayNameFor(model => model.Description) </th>
+                    <th>   @Html.DisplayFor(model => model.Description) </th>
+                </tr>
+
+                <tr>
+                    <th>   @Html.DisplayNameFor(model => model.ParentId) </th>
+                    <th>   @Html.DisplayFor(model => model.ParentId) </th>
+                </tr>
+
+                <tr>
+                    <th>   @Html.DisplayNameFor(model => model.Levels) </th>
+                    <th>   @Html.DisplayFor(model => model.Levels) </th>
+                </tr>
+
+                <tr>
+                    <th>   @Html.DisplayNameFor(model => model.Ordering) </th>
+                    <th>   @Html.DisplayFor(model => model.Ordering) </th>
+                </tr>
+
+                <tr>
+                    <th>   @Html.DisplayNameFor(model => model.Published) </th>
+                    <th>   @Html.DisplayFor(model => model.Published) </th>
+                </tr>
+
+                <tr>
+                    <th>   @Html.DisplayNameFor(model => model.Thumb) </th>
+                    <th>   @Html.DisplayFor(model => model.Thumb) </th>
+                </tr>
+
+                <tr>
+                    <th>   @Html.DisplayNameFor(model => model.Title) </th>
+                    <th>   @Html.DisplayFor(model => model.Title) </th>
+                </tr>
+
+                <tr>
+                    <th>   @Html.DisplayNameFor(model => model.Alias) </th>
+                    <th>   @Html.DisplayFor(model => model.Alias) </th>
+                </tr>
+
+                <tr>
+                    <th>   @Html.DisplayNameFor(model => model.MetaDesc) </th>
+                    <th>   @Html.DisplayFor(model => model.MetaDesc) </th>
+                </tr>
+
+                  <tr>
+                    <th>   @Html.DisplayNameFor(model => model.MetaKey) </th>
+                    <th>   @Html.DisplayFor(model => model.MetaKey) </th>
+                </tr>
+
+                  <tr>
+                    <th>   @Html.DisplayNameFor(model => model.Cover) </th>
+                    <th>   @Html.DisplayFor(model => model.Cover) </th>
+                </tr>
+
+                <tr>
+                    <th>   @Html.DisplayNameFor(model => model.SchemaMarkup) </th>
+                    <th>   @Html.DisplayFor(model => model.SchemaMarkup) </th>
+                </tr>
+
+            </table>
+            <br />
+        </form>
+    </div>
+</body>
+<br />
+<div style="padding-left:20px">
+    <a asp-action="Edit" asp-route-id="@Model.CatId"> Chỉnh sữa</a> |
+    <a asp-action="Index"> Quay về</a>
+</div>

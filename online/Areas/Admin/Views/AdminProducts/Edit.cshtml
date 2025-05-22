@@ -1,0 +1,137 @@
+﻿@model online.Models.Product
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2 style="padding-left:20px"> Chỉnh sửa </h2>
+
+<body style="padding-left:20px">
+    <h4 style="padding-left:20px"> Sản phẩm </h4>
+    <hr />
+    <div class="w3-container" style="width:70%">
+         <form asp-controller="AdminProducts" asp-action="Edit" method="post" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="ProductId" />
+            <input type="hidden" asp-for="Thumb" />
+            <table class="w3-table-all w3-card-4">
+                <tr>
+                    <th>  <label asp-for="ProductName" class="control-label"></label> </th>
+                    <th> <input asp-for="ProductName" class="form-control" />  </th>
+                    <th> <span asp-validation-for="ProductName" class="text-danger"></span> </th>
+                </tr>
+
+                <tr>
+                    <th>  <label asp-for="CatId" class="control-label"></label> </th>
+                    <th> <select asp-for="CatId" class="form-control" asp-items="ViewBag.CatId"></select> </th>
+                </tr>
+
+                <tr>
+                    <th>  <label asp-for="Price" class="control-label"></label> </th>
+                    <th> <input asp-for="Price" class="form-control" />  </th>
+                    <th> <span asp-validation-for="Price" class="text-danger"></span> </th>
+                </tr>
+
+                <tr>
+                    <th> <label asp-for="Discount" class="control-label"></label> </th>
+                    <th> <input asp-for="Discount" class="form-control" /> </th>
+                    <th>  <span asp-validation-for="Discount" class="text-danger"></span></th>
+                </tr>
+
+                <tr>
+                    <th>  <label asp-for="Thumb" class="control-label"></label> </th>
+                    <th> <input asp-for="Thumb" class="form-control" />  </th>
+                    <th> <span asp-validation-for="Thumb" class="text-danger"></span> </th>
+                </tr>
+
+
+                <tr>
+                    <th>  <label asp-for="Video" class="control-label"></label> </th>
+                    <th> <input asp-for="Video" class="form-control" />  </th>
+                    <th> <span asp-validation-for="Video" class="text-danger"></span> </th>
+                </tr>
+
+                
+                <tr>
+                    <th>  <label asp-for="DateCreate" class="control-label"></label> </th>
+                    <th> <input asp-for="DateCreate" class="form-control" />  </th>
+                    <th> <span asp-validation-for="DateCreate" class="text-danger"></span> </th>
+                </tr>
+
+                <tr>
+                    <th> BestSellers  </th>
+                    <th>
+                        <label>
+                            <input asp-for="BestSellers" /> @Html.DisplayNameFor(model => model.BestSellers)
+                        </label>
+                    </th>
+                </tr>
+
+                  <tr>
+                    <th> HoneFlag </th>
+                    <th>
+                        <label>
+                            <input asp-for="HomeFlag" /> @Html.DisplayNameFor(model => model.HomeFlag)
+                        </label>
+                    </th>
+                </tr>
+
+                <tr>
+                    <th> Active </th>
+                    <th>
+                        <label>
+                            <input asp-for="Active" /> @Html.DisplayNameFor(model => model.Active)
+                        </label>
+                    </th>
+                </tr>
+
+                <tr>
+                    <th>  <label asp-for="Tags" class="control-label"></label> </th>
+                    <th> <input asp-for="Tags" class="form-control" />  </th>
+                    <th> <span asp-validation-for="Tags" class="text-danger"></span> </th>
+                </tr>
+
+                <tr>
+                    <th>  <label asp-for="Title" class="control-label"></label> </th>
+                    <th> <input asp-for="Title" class="form-control" />  </th>
+                    <th> <span asp-validation-for="Title" class="text-danger"></span> </th>
+                </tr>
+
+                <tr>
+                    <th> <label asp-for="Alias" class="control-label"></label> </th>
+                    <th> <input asp-for="Alias" class="form-control" /> </th>
+                    <th> <span asp-validation-for="Alias" class="text-danger"></span></th>
+                </tr>
+
+                <tr>
+                    <th>  <label asp-for="MetaDesc" class="control-label"></label> </th>
+                    <th> <input asp-for="MetaDesc" class="form-control" />  </th>
+                    <th> <span asp-validation-for="MetaDesc" class="text-danger"></span> </th>
+                </tr>
+
+                <tr>
+                    <th> <label asp-for="MetaKey" class="control-label"></label> </th>
+                    <th> <input asp-for="MetaKey" class="form-control" /> </th>
+                    <th> <span asp-validation-for="MetaKey" class="text-danger"></span></th>
+                </tr>
+
+                <tr>
+                    <th> <label asp-for="UnitslnStock" class="control-label"></label> </th>
+                    <th> <input asp-for="UnitslnStock" class="form-control" /> </th>
+                    <th> <span asp-validation-for="UnitslnStock" class="text-danger"></span></th>
+                </tr>
+
+
+            </table>
+            <br />
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</body>
+<br />
+<div>
+    <a style="padding-left:20px" asp-action="Index">Quay về</a>
+</div>

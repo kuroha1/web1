@@ -1,0 +1,42 @@
+﻿@model online.Models.Role
+
+@{
+    ViewData["Title"] = " Chỉnh sửa ";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2 style="padding-left:20px"> Chỉnh sữa</h2>
+
+<body style="padding-left:20px">
+    <h4 style="padding-left:20px"> Quyền truy cập </h4>
+    <hr />
+    <div class="w3-container" style="width:70%">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="RoleId" />
+            <table class="w3-table-all w3-card-4">
+                <tr>
+                    <th>  <label asp-for="RoleName" class="control-label"></label> </th>
+                    <th> <input asp-for="RoleName" class="form-control" />  </th>
+                    <th> <span asp-validation-for="RoleName" class="text-danger"></span> </th>
+                </tr>
+
+                <tr>
+                    <th>  <label asp-for="Description" class="control-label"></label> </th>
+                    <th>  <input asp-for="Description" class="form-control" /> </th>
+                    <th>  <span asp-validation-for="Description" class="text-danger"></span> </th>
+                </tr>
+            </table>
+            <br />
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</body>
+<br />
+<div>
+    <a style="padding-left:20px" asp-action="Index">Quay về</a>
+</div>
+
+

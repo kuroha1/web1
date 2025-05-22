@@ -1,0 +1,21 @@
+﻿@model List<online.ModelView.Cartitem>
+@using Microsoft.AspNetCore.Http
+@using Newtonsoft.Json
+@using online.ModelView;
+
+@if (Model != null && Model.Count() > 0)
+{
+    <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true" id="numberCart">
+        <i class="fa fa-shopping-cart"></i>
+        <span>Giỏ hàng</span>
+        <div class="qty">@Model.Count()</div>
+    </a>
+}
+else
+{
+    <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+        <i class="fa fa-shopping-cart"></i>
+        <span>Giỏ hàng</span>
+        <div class="qty">0</div>
+    </a>
+}

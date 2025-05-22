@@ -1,0 +1,428 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\b\u00E0i t\u1EADp\\shit2\\online\\online\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B3797E66-E2DD-4115-A184-A073E2779D66}|online.csproj|d:\\b\u00E0i t\u1EADp\\shit2\\online\\online\\views\\checkout\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B3797E66-E2DD-4115-A184-A073E2779D66}|online.csproj|solutionrelative:views\\checkout\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3797E66-E2DD-4115-A184-A073E2779D66}|online.csproj|d:\\b\u00E0i t\u1EADp\\shit2\\online\\online\\areas\\admin\\views\\adminaccounts\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B3797E66-E2DD-4115-A184-A073E2779D66}|online.csproj|solutionrelative:areas\\admin\\views\\adminaccounts\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3797E66-E2DD-4115-A184-A073E2779D66}|online.csproj|d:\\b\u00E0i t\u1EADp\\shit2\\online\\online\\migrations\\20250508142932_tadatable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B3797E66-E2DD-4115-A184-A073E2779D66}|online.csproj|solutionrelative:migrations\\20250508142932_tadatable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3797E66-E2DD-4115-A184-A073E2779D66}|online.csproj|d:\\b\u00E0i t\u1EADp\\shit2\\online\\online\\models\\newdatacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B3797E66-E2DD-4115-A184-A073E2779D66}|online.csproj|solutionrelative:models\\newdatacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3797E66-E2DD-4115-A184-A073E2779D66}|online.csproj|d:\\b\u00E0i t\u1EADp\\shit2\\online\\online\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{B3797E66-E2DD-4115-A184-A073E2779D66}|online.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3797E66-E2DD-4115-A184-A073E2779D66}|online.csproj|d:\\b\u00E0i t\u1EADp\\shit2\\online\\online\\models\\transactstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B3797E66-E2DD-4115-A184-A073E2779D66}|online.csproj|solutionrelative:models\\transactstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3797E66-E2DD-4115-A184-A073E2779D66}|online.csproj|d:\\b\u00E0i t\u1EADp\\shit2\\online\\online\\models\\tintuc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B3797E66-E2DD-4115-A184-A073E2779D66}|online.csproj|solutionrelative:models\\tintuc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3797E66-E2DD-4115-A184-A073E2779D66}|online.csproj|d:\\b\u00E0i t\u1EADp\\shit2\\online\\online\\models\\shipper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B3797E66-E2DD-4115-A184-A073E2779D66}|online.csproj|solutionrelative:models\\shipper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3797E66-E2DD-4115-A184-A073E2779D66}|online.csproj|d:\\b\u00E0i t\u1EADp\\shit2\\online\\online\\models\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B3797E66-E2DD-4115-A184-A073E2779D66}|online.csproj|solutionrelative:models\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3797E66-E2DD-4115-A184-A073E2779D66}|online.csproj|d:\\b\u00E0i t\u1EADp\\shit2\\online\\online\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B3797E66-E2DD-4115-A184-A073E2779D66}|online.csproj|solutionrelative:models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3797E66-E2DD-4115-A184-A073E2779D66}|online.csproj|d:\\b\u00E0i t\u1EADp\\shit2\\online\\online\\models\\page.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B3797E66-E2DD-4115-A184-A073E2779D66}|online.csproj|solutionrelative:models\\page.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3797E66-E2DD-4115-A184-A073E2779D66}|online.csproj|d:\\b\u00E0i t\u1EADp\\shit2\\online\\online\\models\\orderdetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B3797E66-E2DD-4115-A184-A073E2779D66}|online.csproj|solutionrelative:models\\orderdetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3797E66-E2DD-4115-A184-A073E2779D66}|online.csproj|d:\\b\u00E0i t\u1EADp\\shit2\\online\\online\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B3797E66-E2DD-4115-A184-A073E2779D66}|online.csproj|solutionrelative:models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3797E66-E2DD-4115-A184-A073E2779D66}|online.csproj|d:\\b\u00E0i t\u1EADp\\shit2\\online\\online\\models\\location.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B3797E66-E2DD-4115-A184-A073E2779D66}|online.csproj|solutionrelative:models\\location.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3797E66-E2DD-4115-A184-A073E2779D66}|online.csproj|d:\\b\u00E0i t\u1EADp\\shit2\\online\\online\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B3797E66-E2DD-4115-A184-A073E2779D66}|online.csproj|solutionrelative:models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3797E66-E2DD-4115-A184-A073E2779D66}|online.csproj|d:\\b\u00E0i t\u1EADp\\shit2\\online\\online\\models\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B3797E66-E2DD-4115-A184-A073E2779D66}|online.csproj|solutionrelative:models\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3797E66-E2DD-4115-A184-A073E2779D66}|online.csproj|d:\\b\u00E0i t\u1EADp\\shit2\\online\\online\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B3797E66-E2DD-4115-A184-A073E2779D66}|online.csproj|solutionrelative:models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3797E66-E2DD-4115-A184-A073E2779D66}|online.csproj|d:\\b\u00E0i t\u1EADp\\shit2\\online\\online\\models\\attributeprice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B3797E66-E2DD-4115-A184-A073E2779D66}|online.csproj|solutionrelative:models\\attributeprice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3797E66-E2DD-4115-A184-A073E2779D66}|online.csproj|d:\\b\u00E0i t\u1EADp\\shit2\\online\\online\\models\\attribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B3797E66-E2DD-4115-A184-A073E2779D66}|online.csproj|solutionrelative:models\\attribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3797E66-E2DD-4115-A184-A073E2779D66}|online.csproj|d:\\b\u00E0i t\u1EADp\\shit2\\online\\online\\models\\account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B3797E66-E2DD-4115-A184-A073E2779D66}|online.csproj|solutionrelative:models\\account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3797E66-E2DD-4115-A184-A073E2779D66}|online.csproj|d:\\b\u00E0i t\u1EADp\\shit2\\online\\online\\views\\accounts\\dangkytaikhoan.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B3797E66-E2DD-4115-A184-A073E2779D66}|online.csproj|solutionrelative:views\\accounts\\dangkytaikhoan.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3797E66-E2DD-4115-A184-A073E2779D66}|online.csproj|d:\\b\u00E0i t\u1EADp\\shit2\\online\\online\\areas\\admin\\controllers\\adminproductscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B3797E66-E2DD-4115-A184-A073E2779D66}|online.csproj|solutionrelative:areas\\admin\\controllers\\adminproductscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3797E66-E2DD-4115-A184-A073E2779D66}|online.csproj|d:\\b\u00E0i t\u1EADp\\shit2\\online\\online\\areas\\admin\\views\\adminproducts\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B3797E66-E2DD-4115-A184-A073E2779D66}|online.csproj|solutionrelative:areas\\admin\\views\\adminproducts\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3797E66-E2DD-4115-A184-A073E2779D66}|online.csproj|d:\\b\u00E0i t\u1EADp\\shit2\\online\\online\\areas\\admin\\controllers\\accountscontrollers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B3797E66-E2DD-4115-A184-A073E2779D66}|online.csproj|solutionrelative:areas\\admin\\controllers\\accountscontrollers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 87,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\b\u00E0i t\u1EADp\\shit2\\online\\online\\Views\\Checkout\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Checkout\\Index.cshtml",
+              "ToolTip": "D:\\b\u00E0i t\u1EADp\\shit2\\online\\online\\Views\\Checkout\\Index.cshtml",
+              "RelativeToolTip": "Views\\Checkout\\Index.cshtml",
+              "ViewState": "AgIAAIcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-08T14:40:03.69Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\b\u00E0i t\u1EADp\\shit2\\online\\online\\Areas\\Admin\\Views\\AdminAccounts\\Index.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Admin\\Views\\AdminAccounts\\Index.cshtml",
+              "ToolTip": "D:\\b\u00E0i t\u1EADp\\shit2\\online\\online\\Areas\\Admin\\Views\\AdminAccounts\\Index.cshtml",
+              "RelativeToolTip": "Areas\\Admin\\Views\\AdminAccounts\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-08T14:32:00.014Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "20250508142932_tadatable.cs",
+              "DocumentMoniker": "D:\\b\u00E0i t\u1EADp\\shit2\\online\\online\\Migrations\\20250508142932_tadatable.cs",
+              "RelativeDocumentMoniker": "Migrations\\20250508142932_tadatable.cs",
+              "ToolTip": "D:\\b\u00E0i t\u1EADp\\shit2\\online\\online\\Migrations\\20250508142932_tadatable.cs",
+              "RelativeToolTip": "Migrations\\20250508142932_tadatable.cs",
+              "ViewState": "AgIAAIIAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-08T14:29:33.253Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\b\u00E0i t\u1EADp\\shit2\\online\\online\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "D:\\b\u00E0i t\u1EADp\\shit2\\online\\online\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-05-08T14:26:22.37Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "TransactStatus.cs",
+              "DocumentMoniker": "D:\\b\u00E0i t\u1EADp\\shit2\\online\\online\\Models\\TransactStatus.cs",
+              "RelativeDocumentMoniker": "Models\\TransactStatus.cs",
+              "ToolTip": "D:\\b\u00E0i t\u1EADp\\shit2\\online\\online\\Models\\TransactStatus.cs",
+              "RelativeToolTip": "Models\\TransactStatus.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-08T14:24:08.696Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Tintuc.cs",
+              "DocumentMoniker": "D:\\b\u00E0i t\u1EADp\\shit2\\online\\online\\Models\\Tintuc.cs",
+              "RelativeDocumentMoniker": "Models\\Tintuc.cs",
+              "ToolTip": "D:\\b\u00E0i t\u1EADp\\shit2\\online\\online\\Models\\Tintuc.cs",
+              "RelativeToolTip": "Models\\Tintuc.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-08T14:24:06.919Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Shipper.cs",
+              "DocumentMoniker": "D:\\b\u00E0i t\u1EADp\\shit2\\online\\online\\Models\\Shipper.cs",
+              "RelativeDocumentMoniker": "Models\\Shipper.cs",
+              "ToolTip": "D:\\b\u00E0i t\u1EADp\\shit2\\online\\online\\Models\\Shipper.cs",
+              "RelativeToolTip": "Models\\Shipper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-08T14:24:05.912Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Role.cs",
+              "DocumentMoniker": "D:\\b\u00E0i t\u1EADp\\shit2\\online\\online\\Models\\Role.cs",
+              "RelativeDocumentMoniker": "Models\\Role.cs",
+              "ToolTip": "D:\\b\u00E0i t\u1EADp\\shit2\\online\\online\\Models\\Role.cs",
+              "RelativeToolTip": "Models\\Role.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-08T14:24:02.634Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Product.cs",
+              "DocumentMoniker": "D:\\b\u00E0i t\u1EADp\\shit2\\online\\online\\Models\\Product.cs",
+              "RelativeDocumentMoniker": "Models\\Product.cs",
+              "ToolTip": "D:\\b\u00E0i t\u1EADp\\shit2\\online\\online\\Models\\Product.cs",
+              "RelativeToolTip": "Models\\Product.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-08T14:24:01.72Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Page.cs",
+              "DocumentMoniker": "D:\\b\u00E0i t\u1EADp\\shit2\\online\\online\\Models\\Page.cs",
+              "RelativeDocumentMoniker": "Models\\Page.cs",
+              "ToolTip": "D:\\b\u00E0i t\u1EADp\\shit2\\online\\online\\Models\\Page.cs",
+              "RelativeToolTip": "Models\\Page.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-08T14:24:00.879Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "OrderDetail.cs",
+              "DocumentMoniker": "D:\\b\u00E0i t\u1EADp\\shit2\\online\\online\\Models\\OrderDetail.cs",
+              "RelativeDocumentMoniker": "Models\\OrderDetail.cs",
+              "ToolTip": "D:\\b\u00E0i t\u1EADp\\shit2\\online\\online\\Models\\OrderDetail.cs",
+              "RelativeToolTip": "Models\\OrderDetail.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-08T14:23:59.559Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Order.cs",
+              "DocumentMoniker": "D:\\b\u00E0i t\u1EADp\\shit2\\online\\online\\Models\\Order.cs",
+              "RelativeDocumentMoniker": "Models\\Order.cs",
+              "ToolTip": "D:\\b\u00E0i t\u1EADp\\shit2\\online\\online\\Models\\Order.cs",
+              "RelativeToolTip": "Models\\Order.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-08T14:23:58.444Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "newDataContext.cs",
+              "DocumentMoniker": "D:\\b\u00E0i t\u1EADp\\shit2\\online\\online\\Models\\newDataContext.cs",
+              "RelativeDocumentMoniker": "Models\\newDataContext.cs",
+              "ToolTip": "D:\\b\u00E0i t\u1EADp\\shit2\\online\\online\\Models\\newDataContext.cs",
+              "RelativeToolTip": "Models\\newDataContext.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAYwCYAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-08T14:23:57.095Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Location.cs",
+              "DocumentMoniker": "D:\\b\u00E0i t\u1EADp\\shit2\\online\\online\\Models\\Location.cs",
+              "RelativeDocumentMoniker": "Models\\Location.cs",
+              "ToolTip": "D:\\b\u00E0i t\u1EADp\\shit2\\online\\online\\Models\\Location.cs",
+              "RelativeToolTip": "Models\\Location.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-08T14:23:55.445Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ErrorViewModel.cs",
+              "DocumentMoniker": "D:\\b\u00E0i t\u1EADp\\shit2\\online\\online\\Models\\ErrorViewModel.cs",
+              "RelativeDocumentMoniker": "Models\\ErrorViewModel.cs",
+              "ToolTip": "D:\\b\u00E0i t\u1EADp\\shit2\\online\\online\\Models\\ErrorViewModel.cs",
+              "RelativeToolTip": "Models\\ErrorViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-08T14:23:52.01Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Customer.cs",
+              "DocumentMoniker": "D:\\b\u00E0i t\u1EADp\\shit2\\online\\online\\Models\\Customer.cs",
+              "RelativeDocumentMoniker": "Models\\Customer.cs",
+              "ToolTip": "D:\\b\u00E0i t\u1EADp\\shit2\\online\\online\\Models\\Customer.cs",
+              "RelativeToolTip": "Models\\Customer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-08T14:23:50.266Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Category.cs",
+              "DocumentMoniker": "D:\\b\u00E0i t\u1EADp\\shit2\\online\\online\\Models\\Category.cs",
+              "RelativeDocumentMoniker": "Models\\Category.cs",
+              "ToolTip": "D:\\b\u00E0i t\u1EADp\\shit2\\online\\online\\Models\\Category.cs",
+              "RelativeToolTip": "Models\\Category.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-08T14:23:47.919Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "AttributePrice.cs",
+              "DocumentMoniker": "D:\\b\u00E0i t\u1EADp\\shit2\\online\\online\\Models\\AttributePrice.cs",
+              "RelativeDocumentMoniker": "Models\\AttributePrice.cs",
+              "ToolTip": "D:\\b\u00E0i t\u1EADp\\shit2\\online\\online\\Models\\AttributePrice.cs",
+              "RelativeToolTip": "Models\\AttributePrice.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-08T14:23:46.185Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Attribute.cs",
+              "DocumentMoniker": "D:\\b\u00E0i t\u1EADp\\shit2\\online\\online\\Models\\Attribute.cs",
+              "RelativeDocumentMoniker": "Models\\Attribute.cs",
+              "ToolTip": "D:\\b\u00E0i t\u1EADp\\shit2\\online\\online\\Models\\Attribute.cs",
+              "RelativeToolTip": "Models\\Attribute.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-08T14:23:43.988Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Account.cs",
+              "DocumentMoniker": "D:\\b\u00E0i t\u1EADp\\shit2\\online\\online\\Models\\Account.cs",
+              "RelativeDocumentMoniker": "Models\\Account.cs",
+              "ToolTip": "D:\\b\u00E0i t\u1EADp\\shit2\\online\\online\\Models\\Account.cs",
+              "RelativeToolTip": "Models\\Account.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-08T14:18:56.873Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "DangKyTaiKhoan.cshtml",
+              "DocumentMoniker": "D:\\b\u00E0i t\u1EADp\\shit2\\online\\online\\Views\\Accounts\\DangKyTaiKhoan.cshtml",
+              "RelativeDocumentMoniker": "Views\\Accounts\\DangKyTaiKhoan.cshtml",
+              "ToolTip": "D:\\b\u00E0i t\u1EADp\\shit2\\online\\online\\Views\\Accounts\\DangKyTaiKhoan.cshtml",
+              "RelativeToolTip": "Views\\Accounts\\DangKyTaiKhoan.cshtml",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-08T14:18:41.431Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\b\u00E0i t\u1EADp\\shit2\\online\\online\\Areas\\Admin\\Views\\AdminProducts\\Index.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Admin\\Views\\AdminProducts\\Index.cshtml",
+              "ToolTip": "D:\\b\u00E0i t\u1EADp\\shit2\\online\\online\\Areas\\Admin\\Views\\AdminProducts\\Index.cshtml",
+              "RelativeToolTip": "Areas\\Admin\\Views\\AdminProducts\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-08T14:17:40.1Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "AdminProductsController.cs",
+              "DocumentMoniker": "D:\\b\u00E0i t\u1EADp\\shit2\\online\\online\\Areas\\Admin\\Controllers\\AdminProductsController.cs",
+              "RelativeDocumentMoniker": "Areas\\Admin\\Controllers\\AdminProductsController.cs",
+              "ToolTip": "D:\\b\u00E0i t\u1EADp\\shit2\\online\\online\\Areas\\Admin\\Controllers\\AdminProductsController.cs",
+              "RelativeToolTip": "Areas\\Admin\\Controllers\\AdminProductsController.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAQwDcAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-08T14:17:40.586Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "AccountsControllers.cs",
+              "DocumentMoniker": "D:\\b\u00E0i t\u1EADp\\shit2\\online\\online\\Areas\\Admin\\Controllers\\AccountsControllers.cs",
+              "RelativeDocumentMoniker": "Areas\\Admin\\Controllers\\AccountsControllers.cs",
+              "ToolTip": "D:\\b\u00E0i t\u1EADp\\shit2\\online\\online\\Areas\\Admin\\Controllers\\AccountsControllers.cs",
+              "RelativeToolTip": "Areas\\Admin\\Controllers\\AccountsControllers.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-08T14:17:40.589Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

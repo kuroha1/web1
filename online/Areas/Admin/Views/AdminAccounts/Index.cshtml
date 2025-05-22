@@ -1,0 +1,54 @@
+﻿@model IEnumerable<online.Models.Account>
+
+@{
+    ViewData["Title"] = "Quản lý Tài khoản";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1 style="padding-left:20px">Quản lý tài khoản </h1>
+
+<p>
+    <a asp-action="Create" style="padding-left:20px">Tạo Mới</a>
+</p>
+
+<body>
+    <div class="w3-container">
+        <table class="w3-table-all w3-card-4">
+            <tr>
+                <th> ID </th>
+                <th> Tên </th>
+                <th> Email </th>
+                <th> Password  </th>
+                <th> SĐT </th>
+                <th> Trạng thái</th>
+                <th> Lần ĐN cuối </th>
+                <th> Ngày tạo </th>
+                <th> Quyền </th>
+                <th>Action</th>
+            </tr>
+
+        @if(Model != null)
+            {
+                foreach (var item in Model)
+                {
+                    <tr>
+                        <td>  @Html.DisplayFor(modelItem => item.AccountId)</td>
+                        <td>  @Html.DisplayFor(modelItem => item.FullName)</td>
+                        <td>  @Html.DisplayFor(modelItem => item.Email)</td>
+                        <td> @Html.DisplayFor(modelItem => item.Password)</td>
+                        <td>  @Html.DisplayFor(modelItem => item.Phone)</td>
+                        <td> @Html.DisplayFor(modelItem => item.Active)</td>
+                        <td>  @Html.DisplayFor(modelItem => item.LastLogin)</td>
+                        <td>  @Html.DisplayFor(modelItem => item.CreateDate)</td>
+                        <td> @Html.DisplayFor(modelItem => item.Role.RoleName)</td>
+                        <td>
+                            <a asp-action="Edit" asp-route-id="@item.AccountId">Edit</a> |
+                            <a asp-action="Details" asp-route-id="@item.AccountId">Details</a> |
+                            <a asp-action="Delete" asp-route-id="@item.AccountId">Delete</a>
+                        </td>
+                    </tr>
+                }
+            }
+        </table>
+    </div>
+</body>

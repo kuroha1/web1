@@ -1,0 +1,45 @@
+﻿@model IEnumerable<online.Models.Category>
+
+@{
+    ViewData["Title"] = " Quản lý danh mục ";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1 style="padding-left:20px">Quản lý Danh mục </h1>
+
+<p>
+    <a asp-action="Create" style="padding-left:20px">Tạo Mới</a>
+</p>
+
+<body>
+    <div class="w3-container">
+        <table class="w3-table-all w3-card-4">
+            <tr>
+                <th> ID </th>
+                <th> Tên </th>
+                <th> ParentId  </th>
+                <th> Levels</th>
+                <th> Ordering</th>
+                <th> Published</th>
+                <th>Action</th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>  @Html.DisplayFor(modelItem => item.CatId)</td>
+                    <td>  @Html.DisplayFor(modelItem => item.CatName)</td>
+                    <td> @Html.DisplayFor(modelItem => item.ParentId)</td>
+                    <td>  @Html.DisplayFor(modelItem => item.Levels)</td>
+                    <td>  @Html.DisplayFor(modelItem => item.Ordering)</td>
+                    <td> @Html.DisplayFor(modelItem => item.Published)</td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.CatId">Edit</a> |
+                        <a asp-action="Details" asp-route-id="@item.CatId">Details</a> |
+                        <a asp-action="Delete" asp-route-id="@item.CatId">Delete</a>
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+</body>

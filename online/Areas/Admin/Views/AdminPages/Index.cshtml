@@ -1,0 +1,92 @@
+﻿@using PagedList.Core.Mvc
+@model PagedList.Core.IPagedList<online.Models.Page>
+
+@{
+    int CurrentPage = ViewBag.CurrentPage;
+    ViewData["Title"] = "Danh sách Pages - Page : " + ViewBag.CurrentPage;
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+               PageName
+            </th>
+            <th>
+               Contents
+            </th>
+            <th>
+                thumb
+            </th>
+            <th>
+               published
+            </th>
+            <th>
+             title
+            </th>
+            <th>
+               MetaDesc
+            </th>
+            <th>
+                MetaKey
+            </th>
+            <th>
+                Alias
+            </th>
+            <th>
+                CreateDate
+            </th>
+            <th>
+                Ordering
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.PageName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Contents)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Thumb)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Published)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MetaDesc)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MetaKey)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Alias)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreateDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ordering)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.PageId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.PageId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.PageId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

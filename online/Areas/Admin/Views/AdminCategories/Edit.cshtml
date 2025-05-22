@@ -1,0 +1,108 @@
+﻿@model online.Models.Category
+
+@{
+    ViewData["Title"] = " Chỉnh sửa";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+<h2 style="padding-left:20px"> Chỉnh sửa </h2>
+
+<body style="padding-left:20px">
+    <h4 style="padding-left:20px"> Danh mục</h4>
+    <hr />
+    <div class="w3-container" style="width:70%">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <table class="w3-table-all w3-card-4">
+                <tr>
+                    <th>  <label asp-for="CatName" class="control-label"></label> </th>
+                    <th> <input asp-for="CatName" class="form-control" />  </th>
+                    <th> <span asp-validation-for="CatName" class="text-danger"></span> </th>
+                </tr>
+
+                <tr>
+                    <th>  <label asp-for="Description" class="control-label"></label> </th>
+                    <th>  <input asp-for="Description" class="form-control" /> </th>
+                    <th>  <span asp-validation-for="Description" class="text-danger"></span> </th>
+                </tr>
+
+                <tr>
+                    <th>  <label asp-for="ParentId" class="control-label"></label> </th>
+                    <th> <input asp-for="ParentId" class="form-control" />  </th>
+                    <th> <span asp-validation-for="ParentId" class="text-danger"></span> </th>
+                </tr>
+
+                <tr>
+                    <th> <label asp-for="Levels" class="control-label"></label> </th>
+                    <th> <input asp-for="Levels" class="form-control" /> </th>
+                    <th>  <span asp-validation-for="Levels" class="text-danger"></span></th>
+                </tr>
+
+                <tr>
+                    <th>  <label asp-for="Ordering" class="control-label"></label> </th>
+                    <th> <input asp-for="Ordering" class="form-control" />  </th>
+                    <th> <span asp-validation-for="Ordering" class="text-danger"></span> </th>
+                </tr>
+
+                <tr>
+                    <th>  <label asp-for="Published" class="control-label"></label> </th>
+                    <th> <input asp-for="Published" class="form-control" />  </th>
+                    <th> <span asp-validation-for="Published" class="text-danger"></span> </th>
+                </tr>
+
+
+                <tr>
+                    <th>  <label asp-for="Thumb" class="control-label"></label> </th>
+                    <th> <input asp-for="Thumb" class="form-control" />  </th>
+                    <th> <span asp-validation-for="Thumb" class="text-danger"></span> </th>
+                </tr>
+
+                <tr>
+                    <th>  <label asp-for="Title" class="control-label"></label> </th>
+                    <th> <input asp-for="Title" class="form-control" />  </th>
+                    <th> <span asp-validation-for="Title" class="text-danger"></span> </th>
+                </tr>
+
+                <tr>
+                    <th> <label asp-for="Alias" class="control-label"></label> </th>
+                    <th> <select asp-for="Alias" class="form-control" asp-items="ViewBag.RoleId"></select> </th>
+                    <th> <span asp-validation-for="Alias" class="text-danger"></span></th>
+                </tr>
+
+                <tr>
+                    <th>  <label asp-for="MetaDesc" class="control-label"></label> </th>
+                    <th> <input asp-for="MetaDesc" class="form-control" />  </th>
+                    <th> <span asp-validation-for="MetaDesc" class="text-danger"></span> </th>
+                </tr>
+
+                <tr>
+                    <th> <label asp-for="MetaKey" class="control-label"></label> </th>
+                    <th> <select asp-for="MetaKey" class="form-control" asp-items="ViewBag.RoleId"></select> </th>
+                    <th> <span asp-validation-for="MetaKey" class="text-danger"></span></th>
+                </tr>
+
+                <tr>
+                    <th> <label asp-for="Cover" class="control-label"></label> </th>
+                    <th> <select asp-for="Cover" class="form-control" asp-items="ViewBag.RoleId"></select> </th>
+                    <th> <span asp-validation-for="Cover" class="text-danger"></span></th>
+                </tr>
+
+                <tr>
+                    <th> <label asp-for="SchemaMarkup" class="control-label"></label> </th>
+                    <th> <select asp-for="SchemaMarkup" class="form-control" asp-items="ViewBag.RoleId"></select> </th>
+                    <th> <span asp-validation-for="SchemaMarkup" class="text-danger"></span></th>
+                </tr>
+
+
+            </table>
+            <br />
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</body>
+<br />
+<div>
+    <a style="padding-left:20px" asp-action="Index">Quay về</a>
+</div>
+

@@ -1,0 +1,108 @@
+﻿@model online.Models.Customer
+
+@{
+    ViewData["Title"] = "Tạo mới Khách hàng";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2 style="padding-left:20px">Tạo mới Khách hàng </h2>
+
+<body>
+    <div class="w3-container" style="width:70%">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <table class="w3-table-all w3-card-4">
+                <tr>
+                    <th>  <label asp-for="FullName" class="control-label"></label> </th>
+                    <th> <input asp-for="FullName" class="form-control" />  </th>
+                    <th> <span asp-validation-for="FullName" class="text-danger"></span> </th>
+                </tr>
+
+                <tr>
+                    <th>  <label asp-for="Birthday" class="control-label"></label> </th>
+                    <th> <input asp-for="Birthday" class="form-control" />  </th>
+                    <th> <span asp-validation-for="Birthday" class="text-danger"></span> </th>
+                </tr>
+
+                <tr>
+                    <th>  <label asp-for="Avatar" class="control-label"></label> </th>
+                    <th> <input asp-for="Avatar" class="form-control" />  </th>
+                    <th> <span asp-validation-for="Avatar" class="text-danger"></span> </th>
+                </tr>
+
+                
+                <tr>
+                    <th>  <label asp-for="Address" class="control-label"></label> </th>
+                    <th> <input asp-for="Address" class="form-control" />  </th>
+                    <th> <span asp-validation-for="Address" class="text-danger"></span> </th>
+                </tr>
+
+
+                <tr>
+                    <th>  <label asp-for="Email" class="control-label"></label> </th>
+                    <th> <input asp-for="Email" class="form-control" />  </th>
+                    <th> <span asp-validation-for="Email" class="text-danger"></span> </th>
+                </tr>
+
+
+                <tr>
+                    <th>
+                        <label asp-for="LocationId" class="control-label"></label>
+                    </th>
+                       
+                    <th> <select asp-for="LocationId" class="form-control" asp-items="ViewBag.LocationId"></select> </th>
+                </tr>
+
+
+                <tr>
+                    <th>  <label asp-for="Ward" class="control-label"></label> </th>
+                    <th> <input asp-for="Ward" class="form-control" />  </th>
+                    <th> <span asp-validation-for="Ward" class="text-danger"></span> </th>
+                </tr>
+
+                
+                <tr>
+                    <th>  <label asp-for="District" class="control-label"></label> </th>
+                    <th> <input asp-for="District" class="form-control" />  </th>
+                    <th> <span asp-validation-for="District" class="text-danger"></span> </th>
+                </tr>
+
+
+                <tr>
+                    <th>  <label asp-for="CreateDate" class="control-label"></label> </th>
+                    <th> <input asp-for="CreateDate" class="form-control" />  </th>
+                    <th> <span asp-validation-for="CreateDate" class="text-danger"></span> </th>
+                </tr>
+
+                <tr>
+                    <th>  <label asp-for="Password" class="control-label"></label> </th>
+                    <th> <input asp-for="Password" class="form-control" />  </th>
+                    <th> <span asp-validation-for="Password" class="text-danger"></span> </th>
+                </tr>
+
+                <tr>
+                    <th>  <label asp-for="LastLogin" class="control-label"></label> </th>
+                    <th> <input asp-for="LastLogin" class="form-control" />  </th>
+                    <th> <span asp-validation-for="LastLogin" class="text-danger"></span> </th>
+                </tr>
+
+                <tr>
+                    <th>  Active </th>
+                    <th>
+                        <label>
+                            <input asp-for="Active" /> @Html.DisplayNameFor(model => model.Active)
+                        </label>
+                    </th>
+                </tr>
+            </table>
+            <br />
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</body>
+<br />
+<div style="padding-left:20px">
+    <a asp-action="Index">Quay về</a>
+</div>

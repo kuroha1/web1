@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title> @ViewData["Title"] </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        html, body, h1, h2, h3, h4, h5 {
+            font-family: "Raleway", sans-serif
+        }
+    </style>
+</head>
+<body class="w3-light-grey">
+
+    <!-- Sidebar/menu -->
+    <nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar">
+        <br>
+        <div class="w3-container w3-row">
+            <div class="w3-col s4">
+                <img src="" class="w3-circle w3-margin-right" style="width:46px">
+            </div>
+            <div class="w3-col s8 w3-bar">
+                <span>Welcome, <strong>Mike</strong></span><br>
+                <a href="#" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i></a>
+                <a href="#" class="w3-bar-item w3-button"><i class="fa fa-user"></i></a>
+                <a href="#" class="w3-bar-item w3-button"><i class="fa fa-cog"></i></a>
+            </div>
+        </div>
+        <hr>
+        <div class="w3-container">
+            <h5>Dashboard</h5>
+        </div>
+        <div class="w3-bar-block">
+            <a href="#" class="w3-bar-item w3-button w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black" onclick="w3_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>  Close Menu</a>
+            <a asp-area="Admin" asp-action="Index" asp-controller="AdminCustomers" class="w3-bar-item w3-button w3-padding"><i></i> Khách Hàng</a>
+            <a asp-area="Admin" asp-action="Index" asp-controller="AdminAccounts" class="w3-bar-item w3-button w3-padding"><i></i>  Tài Khoản</a>
+            <a asp-area="Admin" asp-action="Index" asp-controller="AdminRoles" class="w3-bar-item w3-button w3-padding"><i></i>  Quyền Truy Cập</a>
+            <a asp-area="Admin" asp-action="Index" asp-controller="AdminCategories" class="w3-bar-item w3-button w3-padding"><i></i>Danh Mục</a>
+            <a asp-area="Admin" asp-action="Index" asp-controller="AdminProducts" class="w3-bar-item w3-button w3-padding"><i></i>Sản phẩm</a>
+            <a asp-area="Admin" asp-action="Index" asp-controller="AdminOrders" class="w3-bar-item w3-button w3-padding"><i></i>Orders</a>
+            <a asp-area="Admin" asp-action="Index" asp-controller="AdminShippers" class="w3-bar-item w3-button w3-padding"><i></i>Shippers</a>
+            <a asp-area="Admin" asp-action="Index" asp-controller="AdminPages" class="w3-bar-item w3-button w3-padding"><i></i>Pages</a>
+        </div>
+    </nav>
+
+    <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+    <!-- !PAGE CONTENT! -->
+    <div class="w3-main" style="margin-left:300px;margin-top:43px;">
+
+        @RenderBody()
+    </div>
+
+@*    <script src="~/customer/js/jquery.min.js"></script>
+    <script src="~/customer/js/bootstrap.min.js"></script>
+    <script src="~/customer/js/slick.min.js"></script>
+    <script src="~/customer/js/nouislider.min.js"></script>
+    <script src="~/customer/js/jquery.zoom.min.js"></script>
+    <script src="~/customer/js/main.js"></script>*@
+
+    <script>
+        // Get the Sidebar
+        var mySidebar = document.getElementById("mySidebar");
+
+        // Get the DIV with overlay effect
+        var overlayBg = document.getElementById("myOverlay");
+
+        // Toggle between showing and hiding the sidebar, and add overlay effect
+        function w3_open() {
+            if (mySidebar.style.display === 'block') {
+                mySidebar.style.display = 'none';
+                overlayBg.style.display = "none";
+            } else {
+                mySidebar.style.display = 'block';
+                overlayBg.style.display = "block";
+            }
+        }
+
+        // Close the sidebar with the close button
+        function w3_close() {
+            mySidebar.style.display = "none";
+            overlayBg.style.display = "none";
+        }
+    </script>
+   @* @await Component.InvokeAsync("Notyf")*@
+    @await RenderSectionAsync("Scripts",required:false)
+</body>
+</html>

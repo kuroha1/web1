@@ -1,0 +1,33 @@
+﻿@model online.Models.Role
+
+@{
+    ViewData["Title"] = " Chi tiết ";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h4 style="padding-left:20px"> Quyền truy cập</h4>
+
+<body>
+    <div class="w3-container" style="width:70%">
+        <form asp-action="Details">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <table class="w3-table-all w3-card-4">
+                <tr>
+                    <th>   @Html.DisplayNameFor(model => model.RoleName) </th>
+                    <th>   @Html.DisplayFor(model => model.RoleName) </th>
+                </tr>
+
+                <tr>
+                    <th>   @Html.DisplayNameFor(model => model.Description) </th>
+                    <th>   @Html.DisplayFor(model => model.Description) </th>
+                </tr>
+            </table>
+            <br />
+        </form>
+    </div>
+</body>
+<br />
+<div style="padding-left:20px">
+    <a asp-action="Edit" asp-route-id="@Model.RoleId"> Chỉnh sữa</a> |
+    <a asp-action="Index"> Quay về</a>
+</div>

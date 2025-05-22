@@ -1,0 +1,56 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <title>Online Phone Shop</title>
+
+    <!-- Google font -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link type="text/css" rel="stylesheet" href="~/customer/css/bootstrap.min.css" />
+
+    <!-- Slick -->
+    <link type="text/css" rel="stylesheet" href="~/customer/css/slick.css" />
+    <link type="text/css" rel="stylesheet" href="~/customer/css/slick-theme.css" />
+
+    <!-- nouislider -->
+    <link type="text/css" rel="stylesheet" href="~/customer/css/nouislider.min.css" />
+
+    <!-- Font Awesome Icon -->
+    <link rel="stylesheet" href="~/customer/css/font-awesome.min.css">
+
+    <!-- Custom stlylesheet -->
+    <link type="text/css" rel="stylesheet" href="~/customer/css/style.css" />
+
+</head>
+<body>
+    <!-- HEADER -->
+
+    <header>
+    </header>
+    <nav id="navigation">
+        @await Html.PartialAsync("HeaderPartalView.cshtml")
+    </nav>
+    <!-- /HEADER -->
+    @RenderBody()
+
+    <!-- FOOTER -->
+    @await Html.PartialAsync("FooterPartalView.cshtml")
+    <!-- /FOOTER -->
+    <!-- jQuery Plugins -->
+    <script  src="~/customer/js/jquery.min.js"></script>
+    <script  src="~/customer/js/bootstrap.min.js"></script>
+    <script  src="~/customer/js/slick.min.js"></script>
+    <script  src="~/customer/js/nouislider.min.js"></script>
+    <script  src="~/customer/js/jquery.zoom.min.js"></script>
+    
+    <script  src="~/customer/js/main.js"></script>
+    @await RenderSectionAsync("scripts", required : false)
+</body>
+</html>

@@ -1,0 +1,52 @@
+﻿@model online.ModelView.HomeViewVM
+
+@{
+    ViewData["Title"] = "Phone Shop online";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    List<Product> allproducts = ViewBag.AllProducts;
+}
+
+<div class="section">
+    <!-- container -->
+    <div class="container">
+        <!-- row -->
+        <div class="row">
+
+            <!-- section title -->
+            <div class="col-md-12">
+                <div class="section-title">
+                    <h3 class="title">New Products</h3>
+                    <div class="section-nav">
+                        <ul class="section-tab-nav tab-nav">
+                            @foreach (var item in Model.Products)
+                            {
+                                <li><a data-toggle="tab" href="@item.category.Alias">@item.category.CatName</a></li>
+                            }
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- /section title -->
+            <!-- Products tab & slick -->
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="products-tabs">
+                        @await Html.PartialAsync("ListProductsHomeVM.cshtml", allproducts)
+                        <!-- tab -->
+                        @foreach (var item in Model.Products)
+                        {
+                            <div id="@item.category.Alias">
+
+                            @await Html.PartialAsync("ListProductsHomeVM.cshtml", item.lsProducts)
+                            </div>
+                        }
+                        <!-- /tab -->
+                    </div>
+                </div>
+            </div>
+            <!-- Products tab & slick -->
+        </div>
+        <!-- /row -->
+    </div>
+    <!-- /container -->
+</div>

@@ -1,0 +1,35 @@
+﻿@model online.Models.Role
+
+@{
+    ViewData["Title"] = " Xóa quyền ";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2 style="padding-left:20px">Xóa Quyền truy cập</h2>
+
+<h3 style="padding-left:20px">Bạn có chắc muốn xóa Quyền này ?</h3>
+<hr />
+<body>
+    <div class="w3-container" style="width:70%">
+        <form asp-action="Delete">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <table class="w3-table-all w3-card-4">
+                <tr>
+                    <th>  @Html.DisplayNameFor(model => model.RoleName) </th>
+                    <th>    @Html.DisplayFor(model => model.RoleName) </th>
+                </tr>
+
+                <tr>
+                    <th>  @Html.DisplayNameFor(model => model.Description) </th>
+                    <th>    @Html.DisplayFor(model => model.Description) </th>
+                </tr>
+            </table>
+            <br />
+            <form asp-action="Delete">
+                <input type="hidden" asp-for="RoleId" />
+                <input style="padding-left:20px" type="submit" value="Delete" class="btn btn-default" /> |
+                <a asp-action="Index" style="padding-left:20px">Quay về</a>
+            </form>
+        </form>
+    </div>
+</body>

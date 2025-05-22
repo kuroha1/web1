@@ -1,0 +1,227 @@
+﻿@model online.ModelView.MuaHangVM
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    List<online.ModelView.Cartitem> Carts = ViewBag.Giohang;
+}
+
+<div class="section">
+    <!-- container -->
+    <div class="container">
+        <!-- row -->
+        <div class="row">
+
+            <div class="col-md-7">
+                <!-- Billing Details -->
+                <div class="billing-details">
+                    <div class="section-title">
+                        <h3 class="title"> Đia chỉ thanh toán </h3>
+                    </div>
+                    <form asp-controller="Checkout" asp-action="Index" method="post">
+                        <input hidden asp-for="CustomerId" />
+                        <div class="form-group">
+                            <label>Họ và Tên</label>
+                            <input class="input" type="text" asp-for="FullName" placeholder="Họ và Tên">
+                        </div>
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input class="input" type="text" asp-for="Email" placeholder="Email">
+                        </div>
+                        <div class="form-group">
+                            <label>Số Điện Thoại</label>
+                            <input class="input" type="text" asp-for="Phone" placeholder="Số Điện Thoại">
+                        </div>
+                    </form>
+                    <div class="form-group">
+                        <div class="input-checkbox">
+                            <input type="checkbox" id="create-account">
+                            <label for="create-account">
+                                <span></span>
+                                Tạo Tài khoản
+                            </label>
+                            <div class="caption">
+                                <p>Những thông tin trên sẽ được hệ thống sử dụng để tạo Tài Khoản cho bạn !? Hãy kiểm tra lại trước khi nhập mật khẩu cho Tài Khoản !!</p>
+                                <input class="input" type="password" name="password" placeholder="Enter Your Password">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /Billing Details -->
+                <!-- Shiping Details -->
+                <div class="shiping-details">
+                    <div class="section-title">
+                        <h3 class="title">Địa chỉ Giao Hàng</h3>
+                    </div>
+                    <div class="input-checkbox">
+                        <input type="checkbox" id="shiping-address">
+                        <label for="shiping-address">
+                            <span></span>
+                            Giao đến một địa điểm khác ?
+                        </label>
+                    </div>
+                </div>
+                <!-- /Shiping Details -->
+                <!-- Order notes -->
+                <div class="order-notes">
+                    <textarea class="input" placeholder="Lời Nhắn"></textarea>
+                </div>
+                <!-- /Order notes -->
+            </div>
+
+            <!-- Order Details -->
+            <div class="col-md-5 order-details">
+                <div class="section-title text-center">
+                    <h3 class="title">Your Order</h3>
+                </div>
+                <div class="order-summary">
+                    <div class="order-col">
+                        <div><strong> Sản Phẩm </strong></div>
+                        <div><strong> Tổng Cộng </strong></div>
+                    </div>
+                    <div class="order-products">
+                        @if (Carts != null && Carts.Count() > 0)
+                        {
+                            foreach (var item in Carts)
+                            {
+                                <div class="order-col">
+                                    <div class="product_remove" style="width:50px;height:10px">
+                                        <input type="button" value="X" class="removeCart btn btn-danger" data-mahh="@item.sanpham.ProductId">
+                                    </div>
+                                    <div>@item.sanpham.ProductName</div>
+                                    <div>@item.Totalmoney.ToString("#,##0")USD</div>
+                                </div>
+
+                                <div class="cart-plus-minus">
+                                    <input style="width:80px" data-mahh="@item.sanpham.ProductId"
+                                   data-dongia="@item.sanpham.Price"
+                                   class="cartItem cart-plus-minus-box" value="@item.amount" min="1"
+                                   type="number"> x @item.sanpham.Price (USD)
+                                </div>
+                                <hr />
+                            }
+                        }
+                        else
+                        {
+                            <p> Chưa có sản phẩm nào </p>
+                        }
+                    </div>
+                    <div class="order-col">
+                        <div> Vận Chuyển</div>
+                        <div><strong>FREE</strong></div>
+                    </div>
+                    <div class="order-col">
+                        <div><strong>Tổng Cộng</strong></div>
+
+                        <div><strong class="order-total amount">@Carts.Sum(x=>x.Totalmoney).ToString("#,##0") USD</strong></div>
+                    </div>
+                </div>
+                <div class="payment-method">
+                    <div class="input-radio">
+                        <input type="radio" name="payment" id="payment-1">
+                        <label for="payment-1">
+                            <span></span>
+                            Thanh Toán Qua Ngân Hàng
+                        </label>
+                        <div class="caption">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        </div>
+                    </div>
+                    <div class="input-radio">
+                        <input type="radio" name="payment" id="payment-2">
+                        <label for="payment-2">
+                            <span></span>
+                            Thanh Toán Qua App
+                        </label>
+                        <div class="caption">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        </div>
+                    </div>
+                    <div class="input-radio">
+                        <input type="radio" name="payment" id="payment-3">
+                        <label for="payment-3">
+                            <span></span>
+                            Thanh Toán Qua Nhân Viên Vận Chuyển
+                        </label>
+                        <div class="caption">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        </div>
+                    </div>
+                </div>
+                @*  <div class="input-checkbox">
+                <input type="checkbox" id="terms">
+                <label for="terms">
+                <span></span>
+                I've read and accept the <a href="#">terms &amp; conditions</a>
+                </label>
+                </div>*@
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <a href="/checkout.html" class="primary-btn order-submit">Đặt Hàng</a>
+                }
+                else
+                {
+                    <a href="/dang-nhap.html?returnUrl=/checkout.html" class="primary-btn order-submit"></a>
+                }
+            </div>
+            <!-- /Order Details -->
+        </div>
+        <!-- /row -->
+    </div>
+    <!-- /container -->
+</div>
+
+@section scripts{
+    <script>
+        $(document).ready(function () {
+            $(function () {
+                function loadHeaderCart() {
+                    $("#miniCart").load("/AjaxContent/HeaderCart");
+                    $("#numberCart").load("/AjaxContent/NumberCart");
+                }
+                $(".cartItem").click(function () {
+                    var productid = $(this).attr("data-mahh");
+                    var soluong = parseInt($(this).val());
+                    $.ajax({
+                        url: "/api/cart/update",
+                        type: "POST",
+                        dataType: "JSON",
+                        data: {
+                            productID: productid,
+                            amount: soluong
+                        },
+                        success: function (result) {
+                            if (result.success) {
+                                loadHeaderCart(); // Reload lại giỏ hàng
+                                window.location = 'cart.html'; // Load lại cái giỏ
+                            }
+                        },
+                        error: function (rs) {
+                            alert("Cập nhật thất bại")
+                        }
+                    });
+                });
+                $(".removeCart").click(function () {
+                    var productid = $(this).attr("data-mahh");
+                    $.ajax({
+                        url: '/api/cart/remove',
+                        type: "POST",
+                        dataType: "JSON",
+                        data: {
+                            productID: productid
+                        },
+                        success: function (result) {
+                            if (result.success) {
+                                loadHeaderCart(); // Reload lại giỏ hàng
+                                location.reload(); // Load lại cái giỏ
+                            }
+                        },
+                        error: function (error) {
+                            alert(error.responseText);
+                        }
+                    });
+                });
+            });
+        })
+
+    </script>
+}
