@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("online")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f1112e321f1179e1c37d970d173bfbea36d1e7cf")]
 [assembly: System.Reflection.AssemblyProductAttribute("online")]
 [assembly: System.Reflection.AssemblyTitleAttribute("online")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

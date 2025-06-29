@@ -30,14 +30,14 @@
                                         <input type="button" value="X" class="removeCart btn btn-danger" data-mahh="@item.sanpham.ProductId">
                                     </div>
                                     <div>@item.sanpham.ProductName</div>
-                                    <div>@item.Totalmoney.ToString("#,##0")USD</div>
+                                    <div>@item.Totalmoney.ToString("#,##0")VND</div>
                                 </div>
 
                                 <div class="cart-plus-minus">
                                     <input style="width:80px" data-mahh="@item.sanpham.ProductId"
                                    data-dongia="@item.sanpham.Price"
                                    class="cartItem cart-plus-minus-box" value="@item.amount" min="1"
-                                   type="number"> x @item.sanpham.Price (USD)
+                                   type="number"> x @item.sanpham.Price (VND)
                                 </div>
                                 <hr />
                             }
@@ -54,7 +54,7 @@
                     <div class="order-col">
                         <div><strong>Tổng Cộng</strong></div>
 
-                        <div><strong class="order-total amount">@Model.Sum(x=>x.Totalmoney).ToString("#,##0") USD</strong></div>
+                        <div><strong class="order-total amount">@Model.Sum(x=>x.Totalmoney).ToString("#,##0") VND</strong></div>
                     </div>
                 </div>
             </div>

@@ -11632,11 +11632,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\bài tập\\shit2\\online\\online\\online.csproj",
+      "projectUniqueName": "D:\\bài tập\\shit2\\online\\online\\online\\online.csproj",
       "projectName": "online",
-      "projectPath": "D:\\bài tập\\shit2\\online\\online\\online.csproj",
+      "projectPath": "D:\\bài tập\\shit2\\online\\online\\online\\online.csproj",
       "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-      "outputPath": "D:\\bài tập\\shit2\\online\\online\\obj\\",
+      "outputPath": "D:\\bài tập\\shit2\\online\\online\\online\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

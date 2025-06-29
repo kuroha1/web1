@@ -88,14 +88,14 @@
                                         <input type="button" value="X" class="removeCart btn btn-danger" data-mahh="@item.sanpham.ProductId">
                                     </div>
                                     <div>@item.sanpham.ProductName</div>
-                                    <div>@item.Totalmoney.ToString("#,##0")USD</div>
+                                    <div>@item.Totalmoney.ToString("#,##0")VND</div>
                                 </div>
 
                                 <div class="cart-plus-minus">
                                     <input style="width:80px" data-mahh="@item.sanpham.ProductId"
                                    data-dongia="@item.sanpham.Price"
                                    class="cartItem cart-plus-minus-box" value="@item.amount" min="1"
-                                   type="number"> x @item.sanpham.Price (USD)
+                                   type="number"> x @item.sanpham.Price (VND)
                                 </div>
                                 <hr />
                             }
@@ -112,7 +112,7 @@
                     <div class="order-col">
                         <div><strong>Tổng Cộng</strong></div>
 
-                        <div><strong class="order-total amount">@Carts.Sum(x=>x.Totalmoney).ToString("#,##0") USD</strong></div>
+                        <div><strong class="order-total amount">@Carts.Sum(x=>x.Totalmoney).ToString("#,##0") VND</strong></div>
                     </div>
                 </div>
                 <div class="payment-method">
@@ -123,7 +123,7 @@
                             Thanh Toán Qua Ngân Hàng
                         </label>
                         <div class="caption">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                         
                         </div>
                     </div>
                     <div class="input-radio">
@@ -133,7 +133,7 @@
                             Thanh Toán Qua App
                         </label>
                         <div class="caption">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                           
                         </div>
                     </div>
                     <div class="input-radio">
@@ -143,7 +143,7 @@
                             Thanh Toán Qua Nhân Viên Vận Chuyển
                         </label>
                         <div class="caption">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                          
                         </div>
                     </div>
                 </div>

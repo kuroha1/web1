@@ -12,8 +12,8 @@ using online.Models;
 namespace online.Migrations
 {
     [DbContext(typeof(newDataContext))]
-    [Migration("20250508142932_tadatable")]
-    partial class tadatable
+    [Migration("20250522131204_data")]
+    partial class data
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

@@ -86,10 +86,15 @@ wwwroot\Customer\screenshot\Product.png
 wwwroot\Customer\screenshot\Regular.png
 wwwroot\Customer\screenshot\Store.png
 wwwroot\favicon.ico
+wwwroot\images\Products\but-bi-thin-long.jpg
 wwwroot\images\Products\galaxy-z-flip.png
+wwwroot\images\Products\iphone.jpg
 wwwroot\images\Products\iphone-14-pro.png
 wwwroot\images\Products\nokia.png
+wwwroot\images\Products\pen.jpg
 wwwroot\images\Products\samsinh.png
+wwwroot\images\Products\samsung.jpg
+wwwroot\images\Products\vo-a4.jpg
 wwwroot\js\site.js
 wwwroot\lib\bootstrap\dist\css\bootstrap.css
 wwwroot\lib\bootstrap\dist\css\bootstrap.css.map
